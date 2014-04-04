@@ -1,0 +1,12 @@
+2014-04-03 16:17:19.106 30744 ERROR glance.store.sheepdog [-] Error in store configuration: Unexpected error while running command.
+Command: collie
+Exit code: 127
+Stdout: ''
+Stderr: '/bin/sh: 1: collie: not found\n'
+2014-04-03 16:17:19.128 30744 WARNING glance.store.base [-] Failed to configure store correctly: Store sheepdog could not be configured correctly. Reason: Error in store configuration: Unexpected error while running command.
+Command: collie
+Exit code: 127
+Stdout: ''
+Stderr: '/bin/sh: 1: collie: not found\n' Disabling add method.
+2014-04-03 16:17:19.428 30744 WARNING glance.store.base [-] Failed to configure store correctly: Store cinder could not be configured correctly. Reason: Cinder storage requires a context. Disabling add method.
+2014-04-03 16:17:19.831 30744 WARNING glance.api.v2.images [-] Could not find schema properties file schema-image.json. Continuing without custom properties

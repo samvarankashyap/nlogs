@@ -1,0 +1,57 @@
+2014-04-03T09:37:21Z|00001|vlog|INFO|opened log file /var/log/openvswitch/ovs-vswitchd.log
+2014-04-03T09:37:21Z|00002|worker(worker)|INFO|worker process started
+2014-04-03T09:37:21Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2014-04-03T09:37:21Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2014-04-03T09:37:21Z|00004|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:37:21Z|00005|dpif|WARN|system@ovs-system: failed to add tap44627d7e-16 as port: No such device
+2014-04-03T09:37:21Z|00006|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:37:21Z|00007|dpif|WARN|system@ovs-system: failed to add tap9c6d31c2-fa as port: No such device
+2014-04-03T09:37:21Z|00008|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:37:21Z|00009|dpif|WARN|system@ovs-system: failed to add tap90c18613-08 as port: No such device
+2014-04-03T09:37:21Z|00010|bridge|INFO|bridge br-eth1: using datapath ID 000072594b2e384a
+2014-04-03T09:37:21Z|00011|connmgr|INFO|br-eth1: added service controller "punix:/var/run/openvswitch/br-eth1.mgmt"
+2014-04-03T09:37:21Z|00012|bridge|INFO|bridge br-int: using datapath ID 000056a673b55d4a
+2014-04-03T09:37:21Z|00013|connmgr|INFO|br-int: added service controller "punix:/var/run/openvswitch/br-int.mgmt"
+2014-04-03T09:37:21Z|00014|bridge|INFO|bridge br-tun: using datapath ID 00009a8777eabb49
+2014-04-03T09:37:21Z|00015|connmgr|INFO|br-tun: added service controller "punix:/var/run/openvswitch/br-tun.mgmt"
+2014-04-03T09:37:21Z|00016|bridge|INFO|bridge br-tun: added interface gre-1 on port 2
+2014-04-03T09:37:21Z|00017|bridge|INFO|bridge br-tun: added interface patch-int on port 1
+2014-04-03T09:37:21Z|00018|bridge|INFO|bridge br-tun: added interface gre-3 on port 3
+2014-04-03T09:37:21Z|00019|bridge|INFO|ovs-vswitchd (Open vSwitch) 1.10.2
+2014-04-03T09:37:22Z|00020|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:37:22Z|00021|dpif|WARN|system@ovs-system: failed to add tap44627d7e-16 as port: No such device
+2014-04-03T09:37:22Z|00022|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:37:22Z|00023|dpif|WARN|system@ovs-system: failed to add tap9c6d31c2-fa as port: No such device
+2014-04-03T09:37:22Z|00024|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:37:22Z|00025|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:37:22Z|00026|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:37:22Z|00027|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:37:22Z|00028|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:37:22Z|00029|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:37:22Z|00030|dpif|WARN|Dropped 5 log messages in last 0 seconds (most recently, 0 seconds ago) due to excessive rate
+2014-04-03T09:37:22Z|00031|dpif|WARN|system@ovs-system: failed to add tap9c6d31c2-fa as port: No such device
+2014-04-03T09:37:22Z|00032|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:37:22Z|00033|bridge|INFO|bridge br-int: added interface int-br-eth1 on port 1
+2014-04-03T09:37:23Z|00034|bridge|INFO|bridge br-eth1: added interface phy-br-eth1 on port 2
+2014-04-03T09:37:23Z|00035|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:37:23Z|00036|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:37:23Z|00037|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:37:31Z|00038|memory|INFO|7256 kB peak resident set size after 10.0 seconds
+2014-04-03T09:37:31Z|00039|memory|INFO|facets:14 ports:10 rules:16 subfacets:14
+2014-04-03T09:37:32Z|00040|ofproto|INFO|br-eth1: 4 flow_mods in the 3 s starting 10 s ago (3 adds, 1 deletes)
+2014-04-03T09:37:32Z|00041|ofproto|INFO|br-int: 5 flow_mods in the 3 s starting 10 s ago (3 adds, 2 deletes)
+2014-04-03T09:38:55Z|00042|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:38:55Z|00043|dpif|WARN|Dropped 4 log messages in last 93 seconds (most recently, 92 seconds ago) due to excessive rate
+2014-04-03T09:38:55Z|00044|dpif|WARN|system@ovs-system: failed to add tap44627d7e-16 as port: No such device
+2014-04-03T09:38:55Z|00045|bridge|INFO|bridge br-int: added interface tapb7b510f5-1b on port 3
+2014-04-03T09:38:55Z|00046|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:38:55Z|00047|dpif|WARN|system@ovs-system: failed to add tap9c6d31c2-fa as port: No such device
+2014-04-03T09:38:55Z|00048|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:38:55Z|00049|dpif|WARN|system@ovs-system: failed to add tap90c18613-08 as port: No such device
+2014-04-03T09:38:57Z|00050|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap44627d7e-16 failed: No such device
+2014-04-03T09:38:57Z|00051|dpif|WARN|system@ovs-system: failed to add tap44627d7e-16 as port: No such device
+2014-04-03T09:38:57Z|00052|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap9c6d31c2-fa failed: No such device
+2014-04-03T09:38:57Z|00053|dpif|WARN|system@ovs-system: failed to add tap9c6d31c2-fa as port: No such device
+2014-04-03T09:38:57Z|00054|netdev_linux|WARN|ethtool command ETHTOOL_GFLAGS on network device tap90c18613-08 failed: No such device
+2014-04-03T09:38:57Z|00055|dpif|WARN|system@ovs-system: failed to add tap90c18613-08 as port: No such device
+2014-04-03T09:39:07Z|00056|ofproto|INFO|br-int: 1 flow_mods 10 s ago (1 deletes)

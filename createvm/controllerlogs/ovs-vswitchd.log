@@ -1,0 +1,45 @@
+2014-04-03T09:37:07Z|00001|vlog|INFO|opened log file /var/log/openvswitch/ovs-vswitchd.log
+2014-04-03T09:37:07Z|00002|worker(worker)|INFO|worker process started
+2014-04-03T09:37:07Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2014-04-03T09:37:07Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2014-04-03T09:37:07Z|00004|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapf8d574df-79 device failed: No such device
+2014-04-03T09:37:08Z|00005|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapb267dcbc-59 device failed: No such device
+2014-04-03T09:37:08Z|00006|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T09:37:08Z|00007|netdev|WARN|failed to set flags for network device tapf8d574df-79: No such device
+2014-04-03T09:37:08Z|00008|netdev|WARN|failed to set flags for network device tapb267dcbc-59: No such device
+2014-04-03T09:37:08Z|00009|netdev|WARN|failed to set flags for network device qr-c4f3cb8d-5f: No such device
+2014-04-03T09:37:08Z|00010|bridge|INFO|bridge br-tun: added interface gre-2 on port 2
+2014-04-03T09:37:08Z|00011|bridge|INFO|bridge br-tun: added interface gre-1 on port 3
+2014-04-03T09:37:08Z|00012|bridge|INFO|bridge br-tun: added interface patch-int on port 1
+2014-04-03T09:37:08Z|00013|bridge|INFO|bridge br-ex: using datapath ID 0000fe00040e7742
+2014-04-03T09:37:08Z|00014|connmgr|INFO|br-ex: added service controller "punix:/var/run/openvswitch/br-ex.mgmt"
+2014-04-03T09:37:08Z|00015|bridge|INFO|bridge br-eth1: using datapath ID 0000424f35b2f74a
+2014-04-03T09:37:08Z|00016|connmgr|INFO|br-eth1: added service controller "punix:/var/run/openvswitch/br-eth1.mgmt"
+2014-04-03T09:37:08Z|00017|bridge|INFO|bridge br-int: using datapath ID 0000820eb5fd9e41
+2014-04-03T09:37:08Z|00018|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapf8d574df-79 device failed: No such device
+2014-04-03T09:37:08Z|00019|netdev_linux|WARN|tapf8d574df-79: removing policing failed: No such device
+2014-04-03T09:37:08Z|00020|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapb267dcbc-59 device failed: No such device
+2014-04-03T09:37:08Z|00021|netdev_linux|WARN|tapb267dcbc-59: removing policing failed: No such device
+2014-04-03T09:37:08Z|00022|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T09:37:08Z|00023|netdev_linux|WARN|qr-c4f3cb8d-5f: removing policing failed: No such device
+2014-04-03T09:37:08Z|00024|connmgr|INFO|br-int: added service controller "punix:/var/run/openvswitch/br-int.mgmt"
+2014-04-03T09:37:08Z|00025|bridge|INFO|bridge br-tun: using datapath ID 00004a3161d16243
+2014-04-03T09:37:08Z|00026|connmgr|INFO|br-tun: added service controller "punix:/var/run/openvswitch/br-tun.mgmt"
+2014-04-03T09:37:08Z|00027|bridge|INFO|ovs-vswitchd (Open vSwitch) 1.10.2
+2014-04-03T09:37:17Z|00028|memory|INFO|7332 kB peak resident set size after 10.1 seconds
+2014-04-03T09:37:17Z|00029|memory|INFO|facets:5 ports:10 rules:16 subfacets:5
+2014-04-03T09:37:18Z|00030|bridge|INFO|bridge br-int: added interface int-br-eth1 on port 2
+2014-04-03T09:37:19Z|00031|bridge|INFO|bridge br-eth1: added interface phy-br-eth1 on port 2
+2014-04-03T09:37:20Z|00032|bridge|INFO|bridge br-int: added interface qr-c4f3cb8d-5f on port 3
+2014-04-03T09:37:21Z|00033|ofproto|INFO|br-int: 3 flow_mods in the 9 s starting 10 s ago (2 adds, 1 deletes)
+2014-04-03T09:37:21Z|00034|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T09:37:22Z|00035|ofproto|INFO|br-eth1: 3 flow_mods in the 7 s starting 10 s ago (2 adds, 1 deletes)
+2014-04-03T09:37:23Z|00036|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T09:37:23Z|00037|netdev_linux|WARN|qr-c4f3cb8d-5f: removing policing failed: No such device
+2014-04-03T09:38:11Z|00038|bridge|INFO|bridge br-int: added interface tapa1e15d64-9c on port 5
+2014-04-03T09:38:13Z|00039|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapa1e15d64-9c device failed: No such device
+2014-04-03T09:38:15Z|00040|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapa1e15d64-9c device failed: No such device
+2014-04-03T09:38:15Z|00041|netdev_linux|WARN|tapa1e15d64-9c: removing policing failed: No such device
+2014-04-03T09:38:21Z|00042|ofproto|INFO|br-int: 13 flow_mods in the 53 s starting 58 s ago (2 adds, 11 deletes)
+2014-04-03T09:38:22Z|00043|ofproto|INFO|br-eth1: 2 flow_mods in the 51 s starting 59 s ago (2 adds)
+2014-04-03T09:39:21Z|00044|ofproto|INFO|br-int: 1 flow_mods 22 s ago (1 deletes)

@@ -1,0 +1,44 @@
+2014-04-03T10:47:15Z|00001|vlog|INFO|opened log file /var/log/openvswitch/ovs-vswitchd.log
+2014-04-03T10:47:15Z|00002|worker(worker)|INFO|worker process started
+2014-04-03T10:47:15Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2014-04-03T10:47:15Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2014-04-03T10:47:15Z|00004|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapf8d574df-79 device failed: No such device
+2014-04-03T10:47:15Z|00005|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapb267dcbc-59 device failed: No such device
+2014-04-03T10:47:15Z|00006|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on tapa1e15d64-9c device failed: No such device
+2014-04-03T10:47:15Z|00007|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T10:47:15Z|00008|netdev|WARN|failed to set flags for network device tapf8d574df-79: No such device
+2014-04-03T10:47:15Z|00009|netdev|WARN|failed to set flags for network device tapb267dcbc-59: No such device
+2014-04-03T10:47:15Z|00010|netdev|WARN|failed to set flags for network device tapa1e15d64-9c: No such device
+2014-04-03T10:47:15Z|00011|netdev|WARN|failed to set flags for network device qr-c4f3cb8d-5f: No such device
+2014-04-03T10:47:15Z|00012|bridge|INFO|bridge br-tun: added interface gre-2 on port 2
+2014-04-03T10:47:15Z|00013|bridge|INFO|bridge br-tun: added interface gre-1 on port 3
+2014-04-03T10:47:15Z|00014|bridge|INFO|bridge br-tun: added interface patch-int on port 1
+2014-04-03T10:47:15Z|00015|bridge|INFO|bridge br-ex: using datapath ID 0000fe00040e7742
+2014-04-03T10:47:15Z|00016|connmgr|INFO|br-ex: added service controller "punix:/var/run/openvswitch/br-ex.mgmt"
+2014-04-03T10:47:15Z|00017|bridge|INFO|bridge br-eth1: using datapath ID 0000424f35b2f74a
+2014-04-03T10:47:15Z|00018|connmgr|INFO|br-eth1: added service controller "punix:/var/run/openvswitch/br-eth1.mgmt"
+2014-04-03T10:47:15Z|00019|bridge|INFO|bridge br-int: using datapath ID 0000820eb5fd9e41
+2014-04-03T10:47:15Z|00020|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapf8d574df-79 device failed: No such device
+2014-04-03T10:47:15Z|00021|netdev_linux|WARN|tapf8d574df-79: removing policing failed: No such device
+2014-04-03T10:47:15Z|00022|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapa1e15d64-9c device failed: No such device
+2014-04-03T10:47:15Z|00023|netdev_linux|WARN|tapa1e15d64-9c: removing policing failed: No such device
+2014-04-03T10:47:15Z|00024|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on tapb267dcbc-59 device failed: No such device
+2014-04-03T10:47:15Z|00025|netdev_linux|WARN|tapb267dcbc-59: removing policing failed: No such device
+2014-04-03T10:47:15Z|00026|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T10:47:15Z|00027|netdev_linux|WARN|qr-c4f3cb8d-5f: removing policing failed: No such device
+2014-04-03T10:47:15Z|00028|connmgr|INFO|br-int: added service controller "punix:/var/run/openvswitch/br-int.mgmt"
+2014-04-03T10:47:15Z|00029|bridge|INFO|bridge br-tun: using datapath ID 00004a3161d16243
+2014-04-03T10:47:15Z|00030|connmgr|INFO|br-tun: added service controller "punix:/var/run/openvswitch/br-tun.mgmt"
+2014-04-03T10:47:15Z|00031|bridge|INFO|ovs-vswitchd (Open vSwitch) 1.10.2
+2014-04-03T10:47:22Z|00032|bridge|INFO|bridge br-int: added interface int-br-eth1 on port 2
+2014-04-03T10:47:23Z|00033|bridge|INFO|bridge br-eth1: added interface phy-br-eth1 on port 2
+2014-04-03T10:47:24Z|00034|bridge|INFO|bridge br-int: added interface qr-c4f3cb8d-5f on port 3
+2014-04-03T10:47:24Z|00035|netdev_linux|INFO|ioctl(SIOCGIFHWADDR) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T10:47:25Z|00036|memory|INFO|7324 kB peak resident set size after 10.0 seconds
+2014-04-03T10:47:25Z|00037|memory|INFO|facets:8 ports:14 rules:18 subfacets:8
+2014-04-03T10:47:25Z|00038|netdev_linux|WARN|ioctl(SIOCGIFINDEX) on qr-c4f3cb8d-5f device failed: No such device
+2014-04-03T10:47:25Z|00039|netdev_linux|WARN|qr-c4f3cb8d-5f: removing policing failed: No such device
+2014-04-03T10:47:28Z|00040|ofproto|INFO|br-int: 9 flow_mods in the 9 s starting 10 s ago (4 adds, 5 deletes)
+2014-04-03T10:47:28Z|00041|ofproto|INFO|br-eth1: 5 flow_mods in the 6 s starting 10 s ago (4 adds, 1 deletes)
+2014-04-03T10:48:29Z|00042|ofproto|INFO|br-int: 9 flow_mods in the 3 s starting 10 s ago (9 deletes)
+2014-04-03T10:49:34Z|00043|ofproto|INFO|br-int: 1 flow_mods 10 s ago (1 deletes)

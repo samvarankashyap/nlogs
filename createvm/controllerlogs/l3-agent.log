@@ -1,0 +1,1090 @@
+2014-04-03 15:07:08.567 16158 INFO neutron.common.config [-] Logging enabled!
+2014-04-03 15:07:08.603 16158 ERROR neutron.common.legacy [-] Skipping unknown group key: firewall_driver
+2014-04-03 15:07:08.614 16158 DEBUG neutron.common.utils [-] Reloading cached file /etc/neutron/policy.json read_cached_file /usr/lib/python2.7/dist-packages/neutron/common/utils.py:55
+2014-04-03 15:07:08.644 16158 DEBUG neutron.policy [-] Loading policies from file: /etc/neutron/policy.json _set_rules /usr/lib/python2.7/dist-packages/neutron/policy.py:88
+2014-04-03 15:07:08.715 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'list'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:09.694 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'list']
+Exit code: 0
+Stdout: 'qdhcp-53226ed5-fd71-4a6c-8d8e-fc68df4335ac\nqdhcp-c6974581-5329-4984-86d3-dae336912a03\nqrouter-731afe43-5968-457b-9faa-a058fd9401f1\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:09.706 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', '-d', 'link', 'list'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:10.469 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', '-d', 'link', 'list']
+Exit code: 0
+Stdout: '15: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN \\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n23: qr-c4f3cb8d-5f: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN \\    link/ether fa:16:3e:8a:e3:de brd ff:ff:ff:ff:ff:ff\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:10.478 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-int'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:10.572 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-int']
+Exit code: 0
+Stdout: '9: br-int: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN \\    link/ether 82:0e:b5:fd:9e:41 brd ff:ff:ff:ff:ff:ff\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:10.587 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ovs-vsctl', '--timeout=2', '--', '--if-exists', 'del-port', 'br-int', 'qr-c4f3cb8d-5f'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:11.375 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ovs-vsctl', '--timeout=2', '--', '--if-exists', 'del-port', 'br-int', 'qr-c4f3cb8d-5f']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:11.389 16158 DEBUG neutron.services.firewall.agents.l3reference.firewall_l3_agent [-] Initializing firewall agent __init__ /usr/lib/python2.7/dist-packages/neutron/services/firewall/agents/l3reference/firewall_l3_agent.py:66
+2014-04-03 15:07:11.425 16158 DEBUG neutron.services.firewall.agents.l3reference.firewall_l3_agent [-] FWaaS Driver Loaded: 'neutron.services.firewall.drivers.fwaas_base.NoopFwaasDriver' __init__ /usr/lib/python2.7/dist-packages/neutron/services/firewall/agents/l3reference/firewall_l3_agent.py:73
+2014-04-03 15:07:11.444 16158 DEBUG neutron.openstack.common.service [-] Full set of CONF: wait /usr/lib/python2.7/dist-packages/neutron/openstack/common/service.py:113
+2014-04-03 15:07:11.461 16158 DEBUG neutron.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1928
+2014-04-03 15:07:11.464 16158 DEBUG neutron.openstack.common.service [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1929
+2014-04-03 15:07:11.468 16158 DEBUG neutron.openstack.common.service [-] command line args: ['--config-file=/etc/neutron/neutron.conf', '--config-file=/etc/neutron/l3_agent.ini', '--log-file=/var/log/neutron/l3-agent.log'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1930
+2014-04-03 15:07:11.469 16158 DEBUG neutron.openstack.common.service [-] config files: ['/etc/neutron/neutron.conf', '/etc/neutron/l3_agent.ini'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1931
+2014-04-03 15:07:11.473 16158 DEBUG neutron.openstack.common.service [-] ================================================================================ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1932
+2014-04-03 15:07:11.474 16158 DEBUG neutron.openstack.common.service [-] admin_password                 = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.481 16158 DEBUG neutron.openstack.common.service [-] admin_tenant_name              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.485 16158 DEBUG neutron.openstack.common.service [-] admin_user                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.489 16158 DEBUG neutron.openstack.common.service [-] allow_bulk                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.490 16158 DEBUG neutron.openstack.common.service [-] allow_overlapping_ips          = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.493 16158 DEBUG neutron.openstack.common.service [-] allow_pagination               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.502 16158 DEBUG neutron.openstack.common.service [-] allow_sorting                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.505 16158 DEBUG neutron.openstack.common.service [-] allowed_rpc_exception_modules  = ['neutron.openstack.common.exception', 'nova.exception', 'cinder.exception', 'exceptions'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.509 16158 DEBUG neutron.openstack.common.service [-] api_extensions_path            =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.513 16158 DEBUG neutron.openstack.common.service [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.517 16158 DEBUG neutron.openstack.common.service [-] api_workers                    = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.525 16158 DEBUG neutron.openstack.common.service [-] auth_region                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.529 16158 DEBUG neutron.openstack.common.service [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.530 16158 DEBUG neutron.openstack.common.service [-] auth_url                       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.533 16158 DEBUG neutron.openstack.common.service [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.541 16158 DEBUG neutron.openstack.common.service [-] backlog                        = 4096 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.545 16158 DEBUG neutron.openstack.common.service [-] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.552 16158 DEBUG neutron.openstack.common.service [-] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.557 16158 DEBUG neutron.openstack.common.service [-] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.563 16158 DEBUG neutron.openstack.common.service [-] config_dir                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.565 16158 DEBUG neutron.openstack.common.service [-] config_file                    = ['/etc/neutron/neutron.conf', '/etc/neutron/l3_agent.ini'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.566 16158 DEBUG neutron.openstack.common.service [-] control_exchange               = neutron log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.568 16158 DEBUG neutron.openstack.common.service [-] core_plugin                    = neutron.plugins.openvswitch.ovs_neutron_plugin.OVSNeutronPluginV2 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.569 16158 DEBUG neutron.openstack.common.service [-] debug                          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.572 16158 DEBUG neutron.openstack.common.service [-] default_log_levels             = ['amqplib=WARN', 'sqlalchemy=WARN', 'boto=WARN', 'suds=INFO', 'keystone=INFO', 'eventlet.wsgi.server=WARN'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.577 16158 DEBUG neutron.openstack.common.service [-] default_notification_level     = INFO log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.580 16158 DEBUG neutron.openstack.common.service [-] default_publisher_id           = controller log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.593 16158 DEBUG neutron.openstack.common.service [-] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.601 16158 DEBUG neutron.openstack.common.service [-] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.602 16158 DEBUG neutron.openstack.common.service [-] disable_process_locking        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.605 16158 DEBUG neutron.openstack.common.service [-] enable_metadata_proxy          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.608 16158 DEBUG neutron.openstack.common.service [-] external_network_bridge        = br-ex log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.615 16158 DEBUG neutron.openstack.common.service [-] external_pids                  = /var/lib/neutron/external/pids log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.616 16158 DEBUG neutron.openstack.common.service [-] fake_rabbit                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.617 16158 DEBUG neutron.openstack.common.service [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.619 16158 DEBUG neutron.openstack.common.service [-] force_gateway_on_subnet        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.619 16158 DEBUG neutron.openstack.common.service [-] gateway_external_network_id    =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.624 16158 DEBUG neutron.openstack.common.service [-] handle_internal_only_routers   = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.627 16158 DEBUG neutron.openstack.common.service [-] host                           = controller log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.633 16158 DEBUG neutron.openstack.common.service [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.637 16158 DEBUG neutron.openstack.common.service [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.640 16158 DEBUG neutron.openstack.common.service [-] interface_driver               = neutron.agent.linux.interface.OVSInterfaceDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.644 16158 DEBUG neutron.openstack.common.service [-] lock_path                      = /var/lib/neutron/lock log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.648 16158 DEBUG neutron.openstack.common.service [-] log_config                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.657 16158 DEBUG neutron.openstack.common.service [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.658 16158 DEBUG neutron.openstack.common.service [-] log_dir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.659 16158 DEBUG neutron.openstack.common.service [-] log_file                       = /var/log/neutron/l3-agent.log log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.664 16158 DEBUG neutron.openstack.common.service [-] log_format                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.666 16158 DEBUG neutron.openstack.common.service [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user)s %(tenant)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.668 16158 DEBUG neutron.openstack.common.service [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.672 16158 DEBUG neutron.openstack.common.service [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.677 16158 DEBUG neutron.openstack.common.service [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.684 16158 DEBUG neutron.openstack.common.service [-] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.688 16158 DEBUG neutron.openstack.common.service [-] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.693 16158 DEBUG neutron.openstack.common.service [-] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.697 16158 DEBUG neutron.openstack.common.service [-] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.698 16158 DEBUG neutron.openstack.common.service [-] meta_flavor_driver_mappings    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.700 16158 DEBUG neutron.openstack.common.service [-] metadata_port                  = 9697 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.703 16158 DEBUG neutron.openstack.common.service [-] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.706 16158 DEBUG neutron.openstack.common.service [-] network_device_mtu             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.708 16158 DEBUG neutron.openstack.common.service [-] notification_driver            = ['neutron.openstack.common.notifier.rpc_notifier'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.713 16158 DEBUG neutron.openstack.common.service [-] ovs_integration_bridge         = br-int log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.718 16158 DEBUG neutron.openstack.common.service [-] ovs_use_veth                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.723 16158 DEBUG neutron.openstack.common.service [-] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.725 16158 DEBUG neutron.openstack.common.service [-] periodic_fuzzy_delay           = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.727 16158 DEBUG neutron.openstack.common.service [-] periodic_interval              = 40 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.727 16158 DEBUG neutron.openstack.common.service [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.732 16158 DEBUG neutron.openstack.common.service [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.741 16158 DEBUG neutron.openstack.common.service [-] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.744 16158 DEBUG neutron.openstack.common.service [-] root_helper                    = sudo log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.749 16158 DEBUG neutron.openstack.common.service [-] router_id                      =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.752 16158 DEBUG neutron.openstack.common.service [-] rpc_backend                    = neutron.openstack.common.rpc.impl_kombu log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.758 16158 DEBUG neutron.openstack.common.service [-] rpc_cast_timeout               = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.758 16158 DEBUG neutron.openstack.common.service [-] rpc_conn_pool_size             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.759 16158 DEBUG neutron.openstack.common.service [-] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.760 16158 DEBUG neutron.openstack.common.service [-] rpc_thread_pool_size           = 64 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.764 16158 DEBUG neutron.openstack.common.service [-] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.765 16158 DEBUG neutron.openstack.common.service [-] send_arp_for_ha                = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.768 16158 DEBUG neutron.openstack.common.service [-] service_plugins                = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.769 16158 DEBUG neutron.openstack.common.service [-] sqlite_db                      =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.771 16158 DEBUG neutron.openstack.common.service [-] sqlite_synchronous             = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.790 16158 DEBUG neutron.openstack.common.service [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.795 16158 DEBUG neutron.openstack.common.service [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.818 16158 DEBUG neutron.openstack.common.service [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.819 16158 DEBUG neutron.openstack.common.service [-] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.819 16158 DEBUG neutron.openstack.common.service [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.819 16158 DEBUG neutron.openstack.common.service [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.819 16158 DEBUG neutron.openstack.common.service [-] use_namespaces                 = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.820 16158 DEBUG neutron.openstack.common.service [-] use_ssl                        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.820 16158 DEBUG neutron.openstack.common.service [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.820 16158 DEBUG neutron.openstack.common.service [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.820 16158 DEBUG neutron.openstack.common.service [-] verbose                        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:11.830 16158 DEBUG neutron.openstack.common.service [-] fwaas.driver                   = neutron.services.firewall.drivers.fwaas_base.NoopFwaasDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.833 16158 DEBUG neutron.openstack.common.service [-] fwaas.enabled                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.834 16158 DEBUG neutron.openstack.common.service [-] service_providers.service_provider = ['LOADBALANCER:Haproxy:neutron.services.loadbalancer.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.839 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.default_quota           = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.845 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_driver            = neutron.db.quota_db.DbQuotaDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.850 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_firewall          = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.852 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_firewall_policy   = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.861 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_firewall_rule     = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.865 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_items             = ['network', 'subnet', 'port'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.867 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_network           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.870 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_port              = 50 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.872 16158 DEBUG neutron.openstack.common.service [-] QUOTAS.quota_subnet            = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.874 16158 DEBUG neutron.openstack.common.service [-] AGENT.report_interval          = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.877 16158 DEBUG neutron.openstack.common.service [-] AGENT.root_helper              = sudo /usr/bin/neutron-rootwrap /etc/neutron/rootwrap.conf log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.886 16158 DEBUG neutron.openstack.common.service [-] database.connection            = ***************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.890 16158 DEBUG neutron.openstack.common.service [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.893 16158 DEBUG neutron.openstack.common.service [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.895 16158 DEBUG neutron.openstack.common.service [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.898 16158 DEBUG neutron.openstack.common.service [-] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.902 16158 DEBUG neutron.openstack.common.service [-] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.905 16158 DEBUG neutron.openstack.common.service [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.907 16158 DEBUG neutron.openstack.common.service [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.917 16158 DEBUG neutron.openstack.common.service [-] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.920 16158 DEBUG neutron.openstack.common.service [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.923 16158 DEBUG neutron.openstack.common.service [-] database.slave_connection      =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:11.928 16158 DEBUG neutron.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1951
+2014-04-03 15:07:11.930 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:11.936 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:11.942 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:11.948 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:07:12.887 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making synchronous call on q-plugin ... multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:530
+2014-04-03 15:07:12.915 16158 DEBUG neutron.openstack.common.rpc.amqp [-] MSG_ID is 11366ab39a2146ee884e873d723d00e7 multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:533
+2014-04-03 15:07:12.927 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is b7b52f73b24b49bab08dba34694d45ce. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:07:13.147 16158 DEBUG amqp [-] Start from server, version: 0.9, properties: {u'information': u'Licensed under the MPL.  See http://www.rabbitmq.com/', u'product': u'RabbitMQ', u'copyright': u'Copyright (C) 2007-2011 VMware, Inc.', u'capabilities': {u'exchange_exchange_bindings': True, u'consumer_cancel_notify': True, u'publisher_confirms': True, u'basic.nack': True}, u'platform': u'Erlang/OTP', u'version': u'2.7.1'}, mechanisms: [u'PLAIN', u'AMQPLAIN'], locales: [u'en_US'] _start /usr/lib/python2.7/dist-packages/amqp/connection.py:706
+2014-04-03 15:07:13.169 16158 DEBUG amqp [-] Open OK! _open_ok /usr/lib/python2.7/dist-packages/amqp/connection.py:592
+2014-04-03 15:07:13.172 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:13.174 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:13.178 16158 INFO neutron.openstack.common.rpc.common [-] Connected to AMQP server on controller:5672
+2014-04-03 15:07:13.198 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Pool creating new connection create /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:75
+2014-04-03 15:07:13.273 16158 DEBUG amqp [-] Start from server, version: 0.9, properties: {u'information': u'Licensed under the MPL.  See http://www.rabbitmq.com/', u'product': u'RabbitMQ', u'copyright': u'Copyright (C) 2007-2011 VMware, Inc.', u'capabilities': {u'exchange_exchange_bindings': True, u'consumer_cancel_notify': True, u'publisher_confirms': True, u'basic.nack': True}, u'platform': u'Erlang/OTP', u'version': u'2.7.1'}, mechanisms: [u'PLAIN', u'AMQPLAIN'], locales: [u'en_US'] _start /usr/lib/python2.7/dist-packages/amqp/connection.py:706
+2014-04-03 15:07:13.295 16158 DEBUG amqp [-] Open OK! _open_ok /usr/lib/python2.7/dist-packages/amqp/connection.py:592
+2014-04-03 15:07:13.297 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:13.303 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:13.308 16158 INFO neutron.openstack.common.rpc.common [-] Connected to AMQP server on controller:5672
+2014-04-03 15:07:13.311 16158 DEBUG neutron.openstack.common.rpc.service [-] Creating Consumer connection for Service l3_agent start /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/service.py:49
+2014-04-03 15:07:13.356 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:13.364 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:13.378 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:13.394 16158 DEBUG amqp [-] Start from server, version: 0.9, properties: {u'information': u'Licensed under the MPL.  See http://www.rabbitmq.com/', u'product': u'RabbitMQ', u'copyright': u'Copyright (C) 2007-2011 VMware, Inc.', u'capabilities': {u'exchange_exchange_bindings': True, u'consumer_cancel_notify': True, u'publisher_confirms': True, u'basic.nack': True}, u'platform': u'Erlang/OTP', u'version': u'2.7.1'}, mechanisms: [u'PLAIN', u'AMQPLAIN'], locales: [u'en_US'] _start /usr/lib/python2.7/dist-packages/amqp/connection.py:706
+2014-04-03 15:07:13.413 16158 DEBUG amqp [-] Open OK! _open_ok /usr/lib/python2.7/dist-packages/amqp/connection.py:592
+2014-04-03 15:07:13.418 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:13.423 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:13.425 16158 INFO neutron.openstack.common.rpc.common [-] Connected to AMQP server on controller:5672
+2014-04-03 15:07:13.446 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:07:13.450 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:13.459 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:13.470 16158 INFO neutron.agent.l3_agent [-] L3 agent started
+2014-04-03 15:07:14.356 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:14.357 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:14.357 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:15.357 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:15.357 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:15.358 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:16.357 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:16.357 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:16.358 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:16.487 16158 DEBUG neutron.openstack.common.periodic_task [-] Running periodic task L3NATAgentWithStateReport._sync_routers_task run_periodic_tasks /usr/lib/python2.7/dist-packages/neutron/openstack/common/periodic_task.py:176
+2014-04-03 15:07:16.488 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_sync_routers_task"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:16.488 16158 DEBUG neutron.agent.l3_agent [-] Starting _sync_routers_task - fullsync:True _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:715
+2014-04-03 15:07:16.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making synchronous call on q-l3-plugin ... multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:530
+2014-04-03 15:07:16.495 16158 DEBUG neutron.openstack.common.rpc.amqp [-] MSG_ID is f3d84a8db9a240069b68ce95e3054e3e multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:533
+2014-04-03 15:07:16.501 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 6c4cbd69e50942ccbf2464453bff98b0. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:07:16.532 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:07:16.543 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:16.552 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:18.318 16158 DEBUG neutron.agent.l3_agent [-] Processing :[{u'status': u'ACTIVE', u'external_gateway_info': None, u'name': u'myrouter', u'gw_port_id': None, u'admin_state_up': True, u'tenant_id': u'fd2b05cbcbd2418a9767633d0130e127', u'_interfaces': [{u'status': u'ACTIVE', u'subnet': {u'cidr': u'3.3.3.0/24', u'gateway_ip': u'3.3.3.1', u'id': u'2170ba97-342d-4936-a1dd-eed14dbdad30'}, u'binding:host_id': u'controller', u'name': u'', u'allowed_address_pairs': [], u'admin_state_up': True, u'network_id': u'c6974581-5329-4984-86d3-dae336912a03', u'tenant_id': u'fd2b05cbcbd2418a9767633d0130e127', u'extra_dhcp_opts': [], u'binding:vif_type': u'ovs', u'device_owner': u'network:router_interface', u'binding:capabilities': {u'port_filter': True}, u'mac_address': u'fa:16:3e:8a:e3:de', u'fixed_ips': [{u'subnet_id': u'2170ba97-342d-4936-a1dd-eed14dbdad30', u'ip_address': u'3.3.3.1'}], u'id': u'c4f3cb8d-5f27-4526-bcbc-1faab8f9bb85', u'security_groups': [], u'device_id': u'731afe43-5968-457b-9faa-a058fd9401f1'}], u'routes': [], u'id': u'731afe43-5968-457b-9faa-a058fd9401f1'}] _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:725
+2014-04-03 15:07:18.319 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-ex'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:18.383 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-ex']
+Exit code: 0
+Stdout: '6: br-ex: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN \\    link/ether fe:00:04:0e:77:42 brd ff:ff:ff:ff:ff:ff\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:18.406 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making synchronous call on q-l3-plugin ... multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:530
+2014-04-03 15:07:18.413 16158 DEBUG neutron.openstack.common.rpc.amqp [-] MSG_ID is bb11b1a4e70a4d1b90599fb670de19a8 multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:533
+2014-04-03 15:07:18.417 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 7f22ec95af7e47b5bf2301dd748afc58. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:07:18.450 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:07:18.452 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:07:18.454 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:07:18.538 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:19.076 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdout: 'qdhcp-53226ed5-fd71-4a6c-8d8e-fc68df4335ac\nqdhcp-c6974581-5329-4984-86d3-dae336912a03\nqrouter-731afe43-5968-457b-9faa-a058fd9401f1\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:19.081 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'sysctl', '-w', 'net.ipv4.ip_forward=1'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:19.586 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'sysctl', '-w', 'net.ipv4.ip_forward=1']
+Exit code: 0
+Stdout: 'net.ipv4.ip_forward = 1\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:19.600 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "iptables" for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:19.609 16158 DEBUG neutron.openstack.common.lockutils [-] Attempting to grab file lock "iptables" for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:202
+2014-04-03 15:07:19.609 16158 DEBUG neutron.openstack.common.lockutils [-] Got file lock "iptables" at /var/lib/neutron/lock/neutron-iptables for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:232
+2014-04-03 15:07:19.614 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-save', '-c'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.042 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-save', '-c']
+Exit code: 0
+Stdout: '# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:19 2014\n*filter\n:INPUT ACCEPT [0:0]\n:FORWARD ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:neutron-filter-top - [0:0]\n:neutron-l3-agent-FORWARD - [0:0]\n:neutron-l3-agent-INPUT - [0:0]\n:neutron-l3-agent-OUTPUT - [0:0]\n:neutron-l3-agent-local - [0:0]\n[0:0] -A INPUT -j neutron-l3-agent-INPUT\n[0:0] -A FORWARD -j neutron-filter-top\n[0:0] -A FORWARD -j neutron-l3-agent-FORWARD\n[0:0] -A OUTPUT -j neutron-filter-top\n[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT\n[0:0] -A neutron-filter-top -j neutron-l3-agent-local\n[0:0] -A neutron-l3-agent-INPUT -d 127.0.0.1/32 -p tcp -m tcp --dport 9697 -j ACCEPT\nCOMMIT\n# Completed on Thu Apr  3 15:07:19 2014\n# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:19 2014\n*mangle\n:PREROUTING ACCEPT [0:0]\n:INPUT ACCEPT [0:0]\n:FORWARD ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:POSTROUTING ACCEPT [0:0]\nCOMMIT\n# Completed on Thu Apr  3 15:07:19 2014\n# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:19 2014\n*nat\n:PREROUTING ACCEPT [0:0]\n:INPUT ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:POSTROUTING ACCEPT [0:0]\n:neutron-l3-agent-OUTPUT - [0:0]\n:neutron-l3-agent-POSTROUTING - [0:0]\n:neutron-l3-agent-PREROUTING - [0:0]\n:neutron-l3-agent-float-snat - [0:0]\n:neutron-l3-agent-snat - [0:0]\n:neutron-postrouting-bottom - [0:0]\n[0:0] -A PREROUTING -j neutron-l3-agent-PREROUTING\n[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT\n[0:0] -A POSTROUTING -j neutron-l3-agent-POSTROUTING\n[0:0] -A POSTROUTING -j neutron-postrouting-bottom\n[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697\n[0:0] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat\n[0:0] -A neutron-postrouting-bottom -j neutron-l3-agent-snat\nCOMMIT\n# Completed on Thu Apr  3 15:07:19 2014\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.048 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-restore', '-c'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.267 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-restore', '-c']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.270 16158 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply /usr/lib/python2.7/dist-packages/neutron/agent/linux/iptables_manager.py:383
+2014-04-03 15:07:20.271 16158 DEBUG neutron.openstack.common.lockutils [-] Released file lock "iptables" at /var/lib/neutron/lock/neutron-iptables for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:239
+2014-04-03 15:07:20.275 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', 'link', 'show', 'qr-c4f3cb8d-5f'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.490 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', 'link', 'show', 'qr-c4f3cb8d-5f']
+Exit code: 1
+Stdout: ''
+Stderr: 'Device "qr-c4f3cb8d-5f" does not exist.\n' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.494 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['ip', '-o', 'link', 'show', 'br-int'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.527 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['ip', '-o', 'link', 'show', 'br-int']
+Exit code: 0
+Stdout: '9: br-int: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN \\    link/ether 82:0e:b5:fd:9e:41 brd ff:ff:ff:ff:ff:ff\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.529 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', 'link', 'show', 'qr-c4f3cb8d-5f'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.740 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-o', 'link', 'show', 'qr-c4f3cb8d-5f']
+Exit code: 1
+Stdout: ''
+Stderr: 'Device "qr-c4f3cb8d-5f" does not exist.\n' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.750 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ovs-vsctl', '--', '--if-exists', 'del-port', 'qr-c4f3cb8d-5f', '--', 'add-port', 'br-int', 'qr-c4f3cb8d-5f', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'type=internal', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:iface-id=c4f3cb8d-5f27-4526-bcbc-1faab8f9bb85', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:iface-status=active', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:attached-mac=fa:16:3e:8a:e3:de'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:20.967 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ovs-vsctl', '--', '--if-exists', 'del-port', 'qr-c4f3cb8d-5f', '--', 'add-port', 'br-int', 'qr-c4f3cb8d-5f', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'type=internal', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:iface-id=c4f3cb8d-5f27-4526-bcbc-1faab8f9bb85', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:iface-status=active', '--', 'set', 'Interface', 'qr-c4f3cb8d-5f', 'external-ids:attached-mac=fa:16:3e:8a:e3:de']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:20.971 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'address', 'fa:16:3e:8a:e3:de'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:21.169 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'address', 'fa:16:3e:8a:e3:de']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:21.173 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:21.366 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', '-o', 'netns', 'list']
+Exit code: 0
+Stdout: 'qdhcp-53226ed5-fd71-4a6c-8d8e-fc68df4335ac\nqdhcp-c6974581-5329-4984-86d3-dae336912a03\nqrouter-731afe43-5968-457b-9faa-a058fd9401f1\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:21.369 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'netns', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:21.586 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'netns', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:21.594 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'up'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:21.793 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', 'link', 'set', 'qr-c4f3cb8d-5f', 'up']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:21.796 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', 'addr', 'show', 'qr-c4f3cb8d-5f', 'permanent', 'scope', 'global'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:21.996 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', 'addr', 'show', 'qr-c4f3cb8d-5f', 'permanent', 'scope', 'global']
+Exit code: 0
+Stdout: '26: qr-c4f3cb8d-5f: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN \n    link/ether fa:16:3e:8a:e3:de brd ff:ff:ff:ff:ff:ff\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:22.003 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-4', 'addr', 'add', '3.3.3.1/24', 'brd', '3.3.3.255', 'scope', 'global', 'dev', 'qr-c4f3cb8d-5f'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:22.199 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'ip', '-4', 'addr', 'add', '3.3.3.1/24', 'brd', '3.3.3.255', 'scope', 'global', 'dev', 'qr-c4f3cb8d-5f']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:22.209 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "iptables" for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:22.212 16158 DEBUG neutron.openstack.common.lockutils [-] Attempting to grab file lock "iptables" for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:202
+2014-04-03 15:07:22.213 16158 DEBUG neutron.openstack.common.lockutils [-] Got file lock "iptables" at /var/lib/neutron/lock/neutron-iptables for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:232
+2014-04-03 15:07:22.214 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-save', '-c'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:22.407 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-save', '-c']
+Exit code: 0
+Stdout: '# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:22 2014\n*filter\n:INPUT ACCEPT [0:0]\n:FORWARD ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:neutron-filter-top - [0:0]\n:neutron-l3-agent-FORWARD - [0:0]\n:neutron-l3-agent-INPUT - [0:0]\n:neutron-l3-agent-OUTPUT - [0:0]\n:neutron-l3-agent-local - [0:0]\n[0:0] -A INPUT -j neutron-l3-agent-INPUT\n[0:0] -A FORWARD -j neutron-filter-top\n[0:0] -A FORWARD -j neutron-l3-agent-FORWARD\n[0:0] -A OUTPUT -j neutron-filter-top\n[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT\n[0:0] -A neutron-filter-top -j neutron-l3-agent-local\n[0:0] -A neutron-l3-agent-INPUT -d 127.0.0.1/32 -p tcp -m tcp --dport 9697 -j ACCEPT\nCOMMIT\n# Completed on Thu Apr  3 15:07:22 2014\n# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:22 2014\n*mangle\n:PREROUTING ACCEPT [0:0]\n:INPUT ACCEPT [0:0]\n:FORWARD ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:POSTROUTING ACCEPT [0:0]\nCOMMIT\n# Completed on Thu Apr  3 15:07:22 2014\n# Generated by iptables-save v1.4.12 on Thu Apr  3 15:07:22 2014\n*nat\n:PREROUTING ACCEPT [0:0]\n:INPUT ACCEPT [0:0]\n:OUTPUT ACCEPT [0:0]\n:POSTROUTING ACCEPT [0:0]\n:neutron-l3-agent-OUTPUT - [0:0]\n:neutron-l3-agent-POSTROUTING - [0:0]\n:neutron-l3-agent-PREROUTING - [0:0]\n:neutron-l3-agent-float-snat - [0:0]\n:neutron-l3-agent-snat - [0:0]\n:neutron-postrouting-bottom - [0:0]\n[0:0] -A PREROUTING -j neutron-l3-agent-PREROUTING\n[0:0] -A OUTPUT -j neutron-l3-agent-OUTPUT\n[0:0] -A POSTROUTING -j neutron-l3-agent-POSTROUTING\n[0:0] -A POSTROUTING -j neutron-postrouting-bottom\n[0:0] -A neutron-l3-agent-PREROUTING -d 169.254.169.254/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 9697\n[0:0] -A neutron-l3-agent-snat -j neutron-l3-agent-float-snat\n[0:0] -A neutron-postrouting-bottom -j neutron-l3-agent-snat\nCOMMIT\n# Completed on Thu Apr  3 15:07:22 2014\n'
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:22.413 16158 DEBUG neutron.agent.linux.utils [-] Running command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-restore', '-c'] execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:43
+2014-04-03 15:07:22.538 16158 DEBUG neutron.agent.linux.utils [-] 
+Command: ['sudo', '/usr/bin/neutron-rootwrap', '/etc/neutron/rootwrap.conf', 'ip', 'netns', 'exec', 'qrouter-731afe43-5968-457b-9faa-a058fd9401f1', 'iptables-restore', '-c']
+Exit code: 0
+Stdout: ''
+Stderr: '' execute /usr/lib/python2.7/dist-packages/neutron/agent/linux/utils.py:60
+2014-04-03 15:07:22.540 16158 DEBUG neutron.agent.linux.iptables_manager [-] IPTablesManager.apply completed with success _apply /usr/lib/python2.7/dist-packages/neutron/agent/linux/iptables_manager.py:383
+2014-04-03 15:07:22.541 16158 DEBUG neutron.openstack.common.lockutils [-] Released file lock "iptables" at /var/lib/neutron/lock/neutron-iptables for method "_apply"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:239
+2014-04-03 15:07:22.541 16158 DEBUG neutron.agent.l3_agent [-] _sync_routers_task successfully completed _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:728
+2014-04-03 15:07:22.542 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:22.542 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:22.542 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:22.543 16158 WARNING neutron.openstack.common.loopingcall [-] task run outlasted interval by 4.186189 sec
+2014-04-03 15:07:22.543 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:22.544 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:22.544 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:23.544 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:23.544 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:23.545 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:24.545 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:24.545 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:24.545 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:25.545 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:25.546 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:25.547 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:26.546 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:26.546 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:26.547 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:27.547 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:27.548 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:27.549 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:28.549 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:28.550 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:28.550 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:29.549 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:29.550 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:29.551 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:30.550 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:30.551 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:30.552 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:31.550 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:31.551 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:31.552 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:32.551 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:32.552 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:32.553 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:33.551 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:33.553 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:33.553 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:34.552 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:34.553 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:34.554 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:35.552 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:35.553 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:35.554 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:36.553 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:36.555 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:36.555 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:37.553 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:37.555 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:37.555 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:38.555 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:38.556 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:38.557 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:39.556 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:39.557 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:39.558 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:40.557 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:40.558 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:40.559 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:41.557 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:41.559 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:41.559 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:42.558 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:42.558 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:42.558 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:43.558 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:43.559 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:43.560 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:44.559 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:44.560 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:44.560 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:45.559 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:45.560 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:45.560 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:46.560 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:46.561 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:46.561 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:47.561 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:47.562 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:47.563 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:48.562 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:48.563 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:48.564 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:49.562 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:49.562 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:49.563 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:50.563 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:50.563 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:50.563 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:51.563 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:51.563 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:51.563 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:52.563 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:52.564 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:52.564 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:53.563 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:53.564 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:53.564 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:54.564 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:54.565 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:54.566 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:55.565 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:55.567 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:55.567 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:56.487 16158 DEBUG neutron.openstack.common.periodic_task [-] Running periodic task L3NATAgentWithStateReport._sync_routers_task run_periodic_tasks /usr/lib/python2.7/dist-packages/neutron/openstack/common/periodic_task.py:176
+2014-04-03 15:07:56.488 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_sync_routers_task"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:56.488 16158 DEBUG neutron.agent.l3_agent [-] Starting _sync_routers_task - fullsync:False _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:715
+2014-04-03 15:07:56.565 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:56.566 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:56.566 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:57.566 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:57.567 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:57.567 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:58.566 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:58.566 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:58.567 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:07:59.566 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:07:59.567 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:07:59.567 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:00.567 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:00.567 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:00.567 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:01.567 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:01.567 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:01.568 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:02.568 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:02.568 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:02.569 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:03.568 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:03.569 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:03.570 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:04.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:04.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:04.570 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:05.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:05.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:05.571 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:06.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:06.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:06.571 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:07.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:07.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:07.570 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:08.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:08.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:08.571 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:09.569 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:09.570 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:09.571 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:10.570 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:10.571 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:10.572 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:11.571 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:11.572 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:11.572 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:12.571 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:12.572 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:12.572 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:13.470 16158 ERROR neutron.agent.l3_agent [-] Failed reporting state!
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent Traceback (most recent call last):
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent   File "/usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py", line 815, in _report_state
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent     self.use_call)
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent   File "/usr/lib/python2.7/dist-packages/neutron/agent/rpc.py", line 72, in report_state
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent     return self.call(context, msg, topic=self.topic)
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent   File "/usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/proxy.py", line 130, in call
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent     exc.info, real_topic, msg.get('method'))
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent Timeout: Timeout while waiting on RPC response - topic: "q-plugin", RPC method: "report_state" info: "<unknown>"
+2014-04-03 15:08:13.470 16158 TRACE neutron.agent.l3_agent 
+2014-04-03 15:08:13.472 16158 WARNING neutron.openstack.common.loopingcall [-] task run outlasted interval by 57.523719 sec
+2014-04-03 15:08:13.472 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:13.474 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making synchronous call on q-plugin ... multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:530
+2014-04-03 15:08:13.475 16158 DEBUG neutron.openstack.common.rpc.amqp [-] MSG_ID is 38ef28b4e0314996ae6bc42e661e6130 multicall /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:533
+2014-04-03 15:08:13.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is f8f3a0935ca346049a5a13b677d40cf1. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:13.487 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:13.488 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:13.493 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:13.572 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:13.572 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:13.573 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:13.589 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:14.572 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:14.574 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:14.575 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:15.573 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:15.573 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:15.573 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:16.573 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:16.573 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:16.574 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:17.473 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:17.474 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:17.474 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 2ef11bff8c95431eb76bdf07399c454b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:17.480 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:17.483 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:17.485 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:17.488 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:17.573 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:17.574 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:17.575 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:18.573 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:18.574 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:18.575 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:19.574 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:19.575 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:19.575 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:20.576 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:20.577 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:20.578 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:21.474 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:21.474 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:21.475 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 16533e0079734058ada9bf971c9e383c. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:21.486 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:21.489 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:21.491 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:21.497 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:21.576 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:21.578 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:21.578 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:22.577 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:22.583 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:22.586 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:23.577 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:23.578 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:23.579 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:24.578 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:24.579 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:24.580 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:25.474 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:25.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:25.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 6bd469024a1c41fa922c3f379a8a361a. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:25.488 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:25.492 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:25.495 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:25.496 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:25.578 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:25.579 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:25.580 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:26.579 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:26.581 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:26.581 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:27.581 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:27.582 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:27.583 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:28.582 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:28.583 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:28.584 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:29.475 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:29.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:29.478 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 13594469718842b9a4f1027626470ad0. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:29.487 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:29.490 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:29.491 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:29.492 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:29.583 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:29.583 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:29.584 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:30.584 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:30.585 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:30.586 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:31.585 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:31.586 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:31.587 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:32.586 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:32.587 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:32.588 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:33.475 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:33.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:33.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 9041db0fe61647f9ba9c03f26d90a699. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:33.478 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:33.479 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:33.479 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:33.481 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:33.586 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:33.587 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:33.587 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:34.587 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:34.588 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:34.589 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:35.588 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:35.588 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:35.588 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:36.487 16158 DEBUG neutron.openstack.common.periodic_task [-] Running periodic task L3NATAgentWithStateReport._sync_routers_task run_periodic_tasks /usr/lib/python2.7/dist-packages/neutron/openstack/common/periodic_task.py:176
+2014-04-03 15:08:36.488 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_sync_routers_task"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:36.488 16158 DEBUG neutron.agent.l3_agent [-] Starting _sync_routers_task - fullsync:False _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:715
+2014-04-03 15:08:36.588 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:36.588 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:36.589 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:37.475 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:37.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:37.476 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is ef8d76242e1a4dcdb703c99a5f94956b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:37.478 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:37.479 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:37.480 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:37.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:37.588 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:37.589 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:37.590 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:38.589 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:38.589 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:38.589 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:39.589 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:39.589 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:39.590 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:40.589 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:40.590 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:40.591 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:41.476 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:41.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:41.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 9569a403003e4677b04525379b8af75b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:41.479 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:41.479 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:41.480 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:41.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:41.589 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:41.590 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:41.590 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:42.590 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:42.591 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:42.592 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:43.590 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:43.591 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:43.591 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:44.591 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:44.592 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:44.593 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:45.476 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:45.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:45.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is e2e4f39f581b4d0ab38ead6dbf9a9189. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:45.479 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:45.480 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:45.480 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:45.483 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:45.591 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:45.592 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:45.592 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:46.592 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:46.593 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:46.593 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:47.593 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:47.593 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:47.594 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:48.593 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:48.594 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:48.594 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:49.477 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:49.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:49.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is ee1f197600c4411dac510bc3f3da982b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:49.479 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:49.480 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:49.481 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:49.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:49.593 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:49.594 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:49.595 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:50.593 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:50.594 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:50.594 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:51.594 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:51.594 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:51.594 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:52.594 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:52.594 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:52.595 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:53.477 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:53.477 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:53.478 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 064fab3b64844a61b6eb8124be3e2cf0. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:53.480 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:53.480 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:53.481 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:53.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:53.594 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:53.595 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:53.595 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:54.595 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:54.595 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:54.595 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:55.595 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:55.595 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:55.596 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:56.595 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:56.596 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:56.596 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:57.477 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:08:57.478 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:08:57.478 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is f3a1f9b73a0e4dbeb822ef455b1a0a1b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:08:57.484 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:08:57.486 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:08:57.488 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:08:57.491 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:08:57.595 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:57.597 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:57.597 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:58.597 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:58.597 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:58.598 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:08:59.597 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:08:59.599 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:08:59.607 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:00.598 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:00.599 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:00.600 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:01.478 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:01.478 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:01.479 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 5c21bf36c4bc4e7fadaab8b00c2dcf44. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:01.482 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:01.483 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:01.484 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:01.485 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:01.598 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:01.599 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:01.599 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:02.599 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:02.600 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:02.601 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:03.600 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:03.601 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:03.601 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:04.601 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:04.601 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:04.602 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:05.480 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:05.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:05.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is f02a5aa9374d4162981d48cef39abbbe. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:05.491 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:05.493 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:05.499 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:05.500 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:05.601 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:05.602 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:05.603 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:06.601 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:06.602 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:06.603 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:07.602 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:07.603 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:07.604 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:08.602 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:08.603 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:08.604 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:09.480 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:09.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:09.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 1f2584a8c8e8444d929cd5e029b6f4be. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:09.489 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:09.490 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:09.494 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:09.494 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:09.602 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:09.603 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:09.603 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:10.603 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:10.604 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:10.605 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:11.603 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:11.603 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:11.604 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:12.604 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:12.605 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:12.606 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:13.481 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:13.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:13.482 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is d6742b17e1a3424088d71af93e0d90bb. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:13.486 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:13.490 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:13.493 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:13.494 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:13.604 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:13.605 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:13.606 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:14.604 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:14.605 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:14.606 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:15.604 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:15.605 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:15.606 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:16.487 16158 DEBUG neutron.openstack.common.periodic_task [-] Running periodic task L3NATAgentWithStateReport._sync_routers_task run_periodic_tasks /usr/lib/python2.7/dist-packages/neutron/openstack/common/periodic_task.py:176
+2014-04-03 15:09:16.488 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_sync_routers_task"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:16.489 16158 DEBUG neutron.agent.l3_agent [-] Starting _sync_routers_task - fullsync:False _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:715
+2014-04-03 15:09:16.605 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:16.606 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:16.607 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:17.481 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:17.481 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:17.482 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 0213155f175c47eda08819b179c368b9. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:17.484 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:17.484 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:17.487 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:17.487 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:17.605 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:17.605 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:17.606 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:18.605 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:18.607 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:18.607 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:19.606 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:19.607 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:19.608 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:20.608 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:20.609 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:20.611 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:21.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:21.483 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:21.484 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 8b36df796aea4d169ea8b5270265e098. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:21.492 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:21.494 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:21.498 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:21.498 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:21.608 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:21.609 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:21.610 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:22.608 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:22.609 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:22.610 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:23.610 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:23.611 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:23.612 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:24.610 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:24.611 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:24.612 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:25.482 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:25.483 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:25.484 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is a02e324303044a2caa60a1a3023e4be6. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:25.496 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:25.497 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:25.502 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:25.503 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:25.610 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:25.611 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:25.612 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:26.611 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:26.612 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:26.613 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:27.611 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:27.612 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:27.613 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:28.613 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:28.614 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:28.614 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:29.484 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:29.485 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:29.485 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 8c1cd97c362e4704b013a970cf614dc6. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:29.493 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:29.498 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:29.503 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:29.504 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:29.613 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:29.614 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:29.615 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:30.614 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:30.615 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:30.616 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:31.614 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:31.615 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:31.615 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:32.615 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:32.615 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:32.616 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:33.484 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:33.485 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:33.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 191529a1c13e47a9b24a5cd5b9587e0a. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:33.494 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:33.495 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:33.498 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:33.499 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:33.615 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:33.615 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:33.616 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:34.615 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:34.617 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:34.617 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:35.617 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:35.618 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:35.619 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:36.617 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:36.618 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:36.619 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:37.485 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:37.485 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:37.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 1e1b42115ff147b89ea63f036ec6169a. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:37.493 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:37.495 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:37.498 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:37.501 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:37.617 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:37.619 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:37.619 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:38.617 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:38.618 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:38.618 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:39.618 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:39.621 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:39.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:40.618 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:40.620 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:40.620 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:41.485 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:41.485 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:41.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 416c62a6bf2748a28aa65d93a7852eda. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:41.488 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:41.489 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:41.490 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:41.493 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:41.618 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:41.619 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:41.620 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:42.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:42.619 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:42.619 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:43.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:43.620 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:43.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:44.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:44.619 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:44.620 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:45.485 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:45.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:45.487 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 0ed3642b4b114082b5f41e4a561429fb. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:45.498 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:45.499 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:45.503 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:45.507 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:45.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:45.620 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:45.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:46.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:46.620 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:46.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:47.619 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:47.620 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:47.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:48.620 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:48.621 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:48.621 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:49.486 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:49.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:49.487 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 4e53b23b814146e5a156ece1d5d50c38. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:49.496 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:49.498 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:49.501 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:49.504 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:49.620 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:49.621 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:49.622 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:50.621 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:50.623 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:50.623 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:51.622 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:51.623 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:51.623 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:52.623 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:52.624 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:52.625 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:53.486 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:53.486 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:53.487 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 84c390d1759f44c68931e546612a8b0b. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:53.489 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:53.489 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:53.490 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:53.491 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:53.623 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:53.624 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:53.624 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:54.624 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:54.624 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:54.624 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:55.624 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:55.625 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:55.626 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:56.488 16158 DEBUG neutron.openstack.common.periodic_task [-] Running periodic task L3NATAgentWithStateReport._sync_routers_task run_periodic_tasks /usr/lib/python2.7/dist-packages/neutron/openstack/common/periodic_task.py:176
+2014-04-03 15:09:56.489 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_sync_routers_task"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:56.490 16158 DEBUG neutron.agent.l3_agent [-] Starting _sync_routers_task - fullsync:False _sync_routers_task /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:715
+2014-04-03 15:09:56.624 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:56.625 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:56.626 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:57.488 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:09:57.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:09:57.490 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 11ddec1a4f5a48888b601a122280211f. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:09:57.501 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:09:57.503 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:09:57.506 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:09:57.508 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:09:57.625 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:57.626 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:57.627 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:58.625 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:58.626 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:58.627 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:09:59.625 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:09:59.626 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:09:59.628 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:00.626 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:00.627 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:00.628 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:01.488 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:10:01.488 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:10:01.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is c549894919d44626995235b10a865b12. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:10:01.491 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:10:01.491 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:10:01.493 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:10:01.494 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:10:01.626 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:01.627 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:01.628 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:02.626 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:02.627 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:02.627 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:03.626 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:03.629 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:03.634 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:04.627 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:04.628 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:04.629 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:05.488 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:10:05.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:10:05.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 60dc4131fa404345939133c89b4a2c2c. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:10:05.495 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:10:05.497 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:10:05.503 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:10:05.504 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:10:05.628 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:05.631 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:05.633 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:06.629 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:06.629 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:06.630 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:07.629 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:07.630 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:07.630 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:08.630 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:08.631 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:08.631 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:09.488 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:10:09.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:10:09.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is a33f1349b74942a58cf93bca066d2c05. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:10:09.491 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:10:09.492 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:10:09.493 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:10:09.494 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:10:09.630 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:09.631 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:09.631 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:10.631 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:10.631 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:10.632 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:11.631 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:11.632 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:11.632 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:12.632 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:12.632 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:12.633 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:13.489 16158 DEBUG neutron.agent.l3_agent [-] Report state task started _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:794
+2014-04-03 15:10:13.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] Making asynchronous cast on q-plugin... cast /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:559
+2014-04-03 15:10:13.489 16158 DEBUG neutron.openstack.common.rpc.amqp [-] UNIQUE_ID is 41d96ccd813140558fe4bde74a8d35b3. _add_unique_id /usr/lib/python2.7/dist-packages/neutron/openstack/common/rpc/amqp.py:339
+2014-04-03 15:10:13.491 16158 DEBUG amqp [-] Closed channel #1 _do_close /usr/lib/python2.7/dist-packages/amqp/channel.py:88
+2014-04-03 15:10:13.492 16158 DEBUG amqp [-] using channel_id: 1 __init__ /usr/lib/python2.7/dist-packages/amqp/channel.py:70
+2014-04-03 15:10:13.493 16158 DEBUG amqp [-] Channel open _open_ok /usr/lib/python2.7/dist-packages/amqp/channel.py:420
+2014-04-03 15:10:13.495 16158 DEBUG neutron.agent.l3_agent [-] Report state task successfully completed _report_state /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:818
+2014-04-03 15:10:13.632 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:13.633 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:13.633 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:14.633 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:14.633 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:14.633 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694
+2014-04-03 15:10:15.634 16158 DEBUG neutron.openstack.common.lockutils [-] Got semaphore "l3-agent" for method "_rpc_loop"... inner /usr/lib/python2.7/dist-packages/neutron/openstack/common/lockutils.py:191
+2014-04-03 15:10:15.635 16158 DEBUG neutron.agent.l3_agent [-] Starting RPC loop for 0 updated routers _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:686
+2014-04-03 15:10:15.635 16158 DEBUG neutron.agent.l3_agent [-] RPC loop successfully completed _rpc_loop /usr/lib/python2.7/dist-packages/neutron/agent/l3_agent.py:694

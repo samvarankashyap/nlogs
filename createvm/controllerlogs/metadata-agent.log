@@ -1,0 +1,93 @@
+2014-04-03 15:07:07.066 16165 INFO neutron.common.config [-] Logging enabled!
+2014-04-03 15:07:07.092 16165 DEBUG neutron.agent.metadata.agent [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1928
+2014-04-03 15:07:07.094 16165 DEBUG neutron.agent.metadata.agent [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1929
+2014-04-03 15:07:07.095 16165 DEBUG neutron.agent.metadata.agent [-] command line args: ['--config-file=/etc/neutron/neutron.conf', '--config-file=/etc/neutron/metadata_agent.ini', '--log-file=/var/log/neutron/metadata-agent.log'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1930
+2014-04-03 15:07:07.097 16165 DEBUG neutron.agent.metadata.agent [-] config files: ['/etc/neutron/neutron.conf', '/etc/neutron/metadata_agent.ini'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1931
+2014-04-03 15:07:07.104 16165 DEBUG neutron.agent.metadata.agent [-] ================================================================================ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1932
+2014-04-03 15:07:07.114 16165 DEBUG neutron.agent.metadata.agent [-] admin_password                 = ****** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.120 16165 DEBUG neutron.agent.metadata.agent [-] admin_tenant_name              = service log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.127 16165 DEBUG neutron.agent.metadata.agent [-] admin_user                     = neutron log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.137 16165 DEBUG neutron.agent.metadata.agent [-] allow_bulk                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.138 16165 DEBUG neutron.agent.metadata.agent [-] allow_overlapping_ips          = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.139 16165 DEBUG neutron.agent.metadata.agent [-] allow_pagination               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.142 16165 DEBUG neutron.agent.metadata.agent [-] allow_sorting                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.144 16165 DEBUG neutron.agent.metadata.agent [-] allowed_rpc_exception_modules  = ['neutron.openstack.common.exception', 'nova.exception', 'cinder.exception', 'exceptions'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.153 16165 DEBUG neutron.agent.metadata.agent [-] api_extensions_path            =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.161 16165 DEBUG neutron.agent.metadata.agent [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.165 16165 DEBUG neutron.agent.metadata.agent [-] auth_region                    = regionOne log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.168 16165 DEBUG neutron.agent.metadata.agent [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.173 16165 DEBUG neutron.agent.metadata.agent [-] auth_url                       = http://controller:5000/v2.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.175 16165 DEBUG neutron.agent.metadata.agent [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.181 16165 DEBUG neutron.agent.metadata.agent [-] backlog                        = 4096 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.182 16165 DEBUG neutron.agent.metadata.agent [-] base_mac                       = fa:16:3e:00:00:00 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.183 16165 DEBUG neutron.agent.metadata.agent [-] bind_host                      = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.193 16165 DEBUG neutron.agent.metadata.agent [-] bind_port                      = 9696 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.201 16165 DEBUG neutron.agent.metadata.agent [-] config_dir                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.208 16165 DEBUG neutron.agent.metadata.agent [-] config_file                    = ['/etc/neutron/neutron.conf', '/etc/neutron/metadata_agent.ini'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.213 16165 DEBUG neutron.agent.metadata.agent [-] control_exchange               = neutron log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.218 16165 DEBUG neutron.agent.metadata.agent [-] core_plugin                    = neutron.plugins.openvswitch.ovs_neutron_plugin.OVSNeutronPluginV2 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.221 16165 DEBUG neutron.agent.metadata.agent [-] debug                          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.222 16165 DEBUG neutron.agent.metadata.agent [-] default_log_levels             = ['amqplib=WARN', 'sqlalchemy=WARN', 'boto=WARN', 'suds=INFO', 'keystone=INFO', 'eventlet.wsgi.server=WARN'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.223 16165 DEBUG neutron.agent.metadata.agent [-] dhcp_agent_notification        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.225 16165 DEBUG neutron.agent.metadata.agent [-] dhcp_lease_duration            = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.227 16165 DEBUG neutron.agent.metadata.agent [-] disable_process_locking        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.233 16165 DEBUG neutron.agent.metadata.agent [-] endpoint_type                  = adminURL log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.257 16165 DEBUG neutron.agent.metadata.agent [-] fake_rabbit                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.261 16165 DEBUG neutron.agent.metadata.agent [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.262 16165 DEBUG neutron.agent.metadata.agent [-] force_gateway_on_subnet        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.264 16165 DEBUG neutron.agent.metadata.agent [-] host                           = controller log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.265 16165 DEBUG neutron.agent.metadata.agent [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.268 16165 DEBUG neutron.agent.metadata.agent [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.273 16165 DEBUG neutron.agent.metadata.agent [-] lock_path                      = /var/lib/neutron/lock log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.275 16165 DEBUG neutron.agent.metadata.agent [-] log_config                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.281 16165 DEBUG neutron.agent.metadata.agent [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.283 16165 DEBUG neutron.agent.metadata.agent [-] log_dir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.296 16165 DEBUG neutron.agent.metadata.agent [-] log_file                       = /var/log/neutron/metadata-agent.log log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.308 16165 DEBUG neutron.agent.metadata.agent [-] log_format                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.310 16165 DEBUG neutron.agent.metadata.agent [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user)s %(tenant)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.311 16165 DEBUG neutron.agent.metadata.agent [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.312 16165 DEBUG neutron.agent.metadata.agent [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.313 16165 DEBUG neutron.agent.metadata.agent [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.318 16165 DEBUG neutron.agent.metadata.agent [-] mac_generation_retries         = 16 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.320 16165 DEBUG neutron.agent.metadata.agent [-] max_dns_nameservers            = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.321 16165 DEBUG neutron.agent.metadata.agent [-] max_fixed_ips_per_port         = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.325 16165 DEBUG neutron.agent.metadata.agent [-] max_subnet_host_routes         = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.329 16165 DEBUG neutron.agent.metadata.agent [-] metadata_proxy_shared_secret   = ****** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.338 16165 DEBUG neutron.agent.metadata.agent [-] metadata_proxy_socket          = /var/lib/neutron/metadata_proxy log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.345 16165 DEBUG neutron.agent.metadata.agent [-] nova_metadata_ip               = controller log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.353 16165 DEBUG neutron.agent.metadata.agent [-] nova_metadata_port             = 8775 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.355 16165 DEBUG neutron.agent.metadata.agent [-] pagination_max_limit           = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.361 16165 DEBUG neutron.agent.metadata.agent [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.368 16165 DEBUG neutron.agent.metadata.agent [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.373 16165 DEBUG neutron.agent.metadata.agent [-] retry_until_window             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.378 16165 DEBUG neutron.agent.metadata.agent [-] rpc_backend                    = neutron.openstack.common.rpc.impl_kombu log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.381 16165 DEBUG neutron.agent.metadata.agent [-] rpc_cast_timeout               = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.383 16165 DEBUG neutron.agent.metadata.agent [-] rpc_conn_pool_size             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.389 16165 DEBUG neutron.agent.metadata.agent [-] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.390 16165 DEBUG neutron.agent.metadata.agent [-] rpc_thread_pool_size           = 64 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.395 16165 DEBUG neutron.agent.metadata.agent [-] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.401 16165 DEBUG neutron.agent.metadata.agent [-] service_plugins                = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.409 16165 DEBUG neutron.agent.metadata.agent [-] sqlite_db                      =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.414 16165 DEBUG neutron.agent.metadata.agent [-] sqlite_synchronous             = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.418 16165 DEBUG neutron.agent.metadata.agent [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.425 16165 DEBUG neutron.agent.metadata.agent [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.429 16165 DEBUG neutron.agent.metadata.agent [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.431 16165 DEBUG neutron.agent.metadata.agent [-] state_path                     = /var/lib/neutron log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.441 16165 DEBUG neutron.agent.metadata.agent [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.442 16165 DEBUG neutron.agent.metadata.agent [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.449 16165 DEBUG neutron.agent.metadata.agent [-] use_ssl                        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.457 16165 DEBUG neutron.agent.metadata.agent [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.461 16165 DEBUG neutron.agent.metadata.agent [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.461 16165 DEBUG neutron.agent.metadata.agent [-] verbose                        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1941
+2014-04-03 15:07:07.469 16165 DEBUG neutron.agent.metadata.agent [-] database.connection            = ***************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.476 16165 DEBUG neutron.agent.metadata.agent [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.478 16165 DEBUG neutron.agent.metadata.agent [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.479 16165 DEBUG neutron.agent.metadata.agent [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.481 16165 DEBUG neutron.agent.metadata.agent [-] database.max_overflow          = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.497 16165 DEBUG neutron.agent.metadata.agent [-] database.max_pool_size         = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.509 16165 DEBUG neutron.agent.metadata.agent [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.513 16165 DEBUG neutron.agent.metadata.agent [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.517 16165 DEBUG neutron.agent.metadata.agent [-] database.pool_timeout          = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.518 16165 DEBUG neutron.agent.metadata.agent [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.521 16165 DEBUG neutron.agent.metadata.agent [-] database.slave_connection      =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1949
+2014-04-03 15:07:07.522 16165 DEBUG neutron.agent.metadata.agent [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1951

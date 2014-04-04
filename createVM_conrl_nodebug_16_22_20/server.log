@@ -1,0 +1,14 @@
+2014-04-03 16:17:14.598 30542 ERROR neutron.common.legacy [-] Skipping unknown group key: firewall_driver
+2014-04-03 16:17:19.548 30542 WARNING neutron.api.extensions [-] Extension lbaas not supported by any of loaded plugins
+2014-04-03 16:17:19.608 30542 WARNING neutron.api.extensions [-] Extension port-security not supported by any of loaded plugins
+2014-04-03 16:17:19.613 30542 WARNING neutron.api.extensions [-] Extension multi-provider not supported by any of loaded plugins
+2014-04-03 16:17:19.621 30542 WARNING neutron.api.extensions [-] Extension flavor not supported by any of loaded plugins
+2014-04-03 16:17:19.631 30542 WARNING neutron.api.extensions [-] Extension vpnaas not supported by any of loaded plugins
+2014-04-03 16:17:19.653 30542 WARNING neutron.api.extensions [-] Extension routed-service-insertion not supported by any of loaded plugins
+2014-04-03 16:17:19.662 30542 WARNING neutron.api.extensions [-] Extension lbaas_agent_scheduler not supported by any of loaded plugins
+2014-04-03 16:17:19.675 30542 WARNING neutron.api.extensions [-] Extension fwaas not supported by any of loaded plugins
+2014-04-03 16:17:19.698 30542 WARNING neutron.api.extensions [-] Extension router-service-type not supported by any of loaded plugins
+2014-04-03 16:17:19.719 30542 WARNING neutron.api.extensions [-] Extension service-type not supported by any of loaded plugins
+2014-04-03 16:17:19.745 30542 WARNING neutron.api.extensions [-] Extension metering not supported by any of loaded plugins
+2014-04-03 16:17:21.255 30542 WARNING neutron.scheduler.l3_agent_scheduler [-] L3 agent 75529b4f-d7f3-41e6-a577-5ca747d10b20 is not active
+2014-04-03 16:19:22.853 30542 WARNING neutron.db.agentschedulers_db [-] Fail scheduling network {'status': u'ACTIVE', 'subnets': [u'f832cbbc-61f4-405b-9cee-2c56bbb62927'], 'name': u'mynetwork1', 'provider:physical_network': u'physnet1', 'admin_state_up': True, 'tenant_id': u'fd2b05cbcbd2418a9767633d0130e127', 'provider:network_type': u'vlan', 'router:external': False, 'shared': False, 'id': u'53226ed5-fd71-4a6c-8d8e-fc68df4335ac', 'provider:segmentation_id': 1000L}

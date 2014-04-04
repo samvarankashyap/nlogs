@@ -1,0 +1,168 @@
+
+=INFO REPORT==== 3-Apr-2014::16:17:09 ===
+Limiting to approx 924 file handles (829 sockets)
+
+=INFO REPORT==== 3-Apr-2014::16:17:09 ===
+Memory limit set to 801MB of 2003MB total.
+
+=INFO REPORT==== 3-Apr-2014::16:17:09 ===
+msg_store_transient: using rabbit_msg_store_ets_index to provide index
+
+=INFO REPORT==== 3-Apr-2014::16:17:09 ===
+msg_store_persistent: using rabbit_msg_store_ets_index to provide index
+
+=WARNING REPORT==== 3-Apr-2014::16:17:09 ===
+msg_store_persistent: rebuilding indices from scratch
+
+=INFO REPORT==== 3-Apr-2014::16:17:09 ===
+started TCP Listener on [::]:5672
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38200
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+starting TCP connection <0.191.0> from 127.0.0.1:38200
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38201
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+starting TCP connection <0.195.0> from 127.0.0.1:38201
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38202
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+starting TCP connection <0.204.0> from 127.0.0.1:38202
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38203
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+starting TCP connection <0.214.0> from 127.0.0.1:38203
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38204
+
+=INFO REPORT==== 3-Apr-2014::16:17:15 ===
+starting TCP connection <0.236.0> from 127.0.0.1:38204
+
+=INFO REPORT==== 3-Apr-2014::16:17:18 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38207
+
+=INFO REPORT==== 3-Apr-2014::16:17:18 ===
+starting TCP connection <0.248.0> from 127.0.0.1:38207
+
+=INFO REPORT==== 3-Apr-2014::16:17:18 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38208
+
+=INFO REPORT==== 3-Apr-2014::16:17:18 ===
+starting TCP connection <0.252.0> from 127.0.0.1:38208
+
+=INFO REPORT==== 3-Apr-2014::16:17:19 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38209
+
+=INFO REPORT==== 3-Apr-2014::16:17:19 ===
+starting TCP connection <0.261.0> from 127.0.0.1:38209
+
+=INFO REPORT==== 3-Apr-2014::16:17:19 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38210
+
+=INFO REPORT==== 3-Apr-2014::16:17:19 ===
+starting TCP connection <0.280.0> from 127.0.0.1:38210
+
+=INFO REPORT==== 3-Apr-2014::16:17:21 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38217
+
+=INFO REPORT==== 3-Apr-2014::16:17:21 ===
+starting TCP connection <0.298.0> from 127.0.0.1:38217
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38220
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+starting TCP connection <0.326.0> from 127.0.0.1:38220
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38221
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+starting TCP connection <0.330.0> from 127.0.0.1:38221
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38222
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+starting TCP connection <0.344.0> from 127.0.0.1:38222
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38223
+
+=INFO REPORT==== 3-Apr-2014::16:17:23 ===
+starting TCP connection <0.358.0> from 127.0.0.1:38223
+
+=INFO REPORT==== 3-Apr-2014::16:17:25 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38224
+
+=INFO REPORT==== 3-Apr-2014::16:17:25 ===
+starting TCP connection <0.374.0> from 127.0.0.1:38224
+
+=INFO REPORT==== 3-Apr-2014::16:17:50 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49873
+
+=INFO REPORT==== 3-Apr-2014::16:17:50 ===
+starting TCP connection <0.515.0> from 10.233.52.58:49873
+
+=INFO REPORT==== 3-Apr-2014::16:17:50 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49874
+
+=INFO REPORT==== 3-Apr-2014::16:17:50 ===
+starting TCP connection <0.527.0> from 10.233.52.58:49874
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49875
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+starting TCP connection <0.539.0> from 10.233.52.58:49875
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49876
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+starting TCP connection <0.548.0> from 10.233.52.58:49876
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38225
+
+=INFO REPORT==== 3-Apr-2014::16:17:51 ===
+starting TCP connection <0.560.0> from 127.0.0.1:38225
+
+=INFO REPORT==== 3-Apr-2014::16:17:52 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49877
+
+=INFO REPORT==== 3-Apr-2014::16:17:52 ===
+starting TCP connection <0.676.0> from 10.233.52.58:49877
+
+=INFO REPORT==== 3-Apr-2014::16:17:52 ===
+accepted TCP connection on [::]:5672 from 10.233.52.58:49878
+
+=INFO REPORT==== 3-Apr-2014::16:17:52 ===
+starting TCP connection <0.687.0> from 10.233.52.58:49878
+
+=INFO REPORT==== 3-Apr-2014::16:19:20 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38264
+
+=INFO REPORT==== 3-Apr-2014::16:19:20 ===
+starting TCP connection <0.1572.0> from 127.0.0.1:38264
+
+=INFO REPORT==== 3-Apr-2014::16:19:21 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38266
+
+=INFO REPORT==== 3-Apr-2014::16:19:21 ===
+starting TCP connection <0.1588.0> from 127.0.0.1:38266
+
+=INFO REPORT==== 3-Apr-2014::16:19:46 ===
+accepted TCP connection on [::]:5672 from 127.0.0.1:38281
+
+=INFO REPORT==== 3-Apr-2014::16:19:46 ===
+starting TCP connection <0.2101.0> from 127.0.0.1:38281

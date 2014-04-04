@@ -1,0 +1,4 @@
+2014-04-03 16:17:18.087 30480 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2014-04-03 16:17:18.448 30480 AUDIT nova.service [-] Starting conductor node (version 2013.2.2)
+2014-04-03 16:17:23.229 30480 INFO nova.openstack.common.rpc.common [req-4017be42-6dbe-4e22-836d-1eba1702feba None None] Connected to AMQP server on controller:5672
+2014-04-03 16:17:51.483 30480 INFO nova.openstack.common.rpc.common [req-3d779bac-ad7e-4404-b05c-06228c638539 None None] Connected to AMQP server on controller:5672

@@ -1,0 +1,6 @@
+Thu Apr  3 09:37:21 UTC 2014:load-kmod
+Thu Apr  3 09:37:21 UTC 2014:start --system-id=random
+ * Starting ovsdb-server
+ * Configuring Open vSwitch system IDs
+ * Starting ovs-vswitchd
+ * Enabling remote OVSDB managers

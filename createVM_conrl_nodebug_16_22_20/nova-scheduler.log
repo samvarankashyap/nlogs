@@ -1,0 +1,6 @@
+2014-04-03 16:17:18.159 30507 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2014-04-03 16:17:18.661 30507 AUDIT nova.service [-] Starting scheduler node (version 2013.2.2)
+2014-04-03 16:17:23.260 30507 INFO nova.openstack.common.rpc.common [req-983d1fde-d071-413f-bfa1-bc5db02041b0 None None] Connected to AMQP server on controller:5672
+2014-04-03 16:19:21.026 30507 INFO nova.scheduler.filter_scheduler [req-5fd2ed32-d4f1-4083-906a-d425c5e5c7b5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] Attempting to build 1 instance(s) uuids: [u'bd558c6f-fba2-4481-8473-a39085a00a54']
+2014-04-03 16:19:21.052 30507 INFO nova.scheduler.filter_scheduler [req-5fd2ed32-d4f1-4083-906a-d425c5e5c7b5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] Choosing host WeighedHost [host: compute1, weight: 1378.0] for instance bd558c6f-fba2-4481-8473-a39085a00a54
+2014-04-03 16:19:21.247 30507 INFO nova.openstack.common.rpc.common [req-5fd2ed32-d4f1-4083-906a-d425c5e5c7b5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] Connected to AMQP server on controller:5672

@@ -1,0 +1,234 @@
+2014-04-03 16:17:17.944 30471 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2014-04-03 16:17:18.595 30471 INFO nova.wsgi [-] ec2 listening on 0.0.0.0:8773
+2014-04-03 16:17:18.629 30471 INFO nova.openstack.common.service [-] Starting 1 workers
+2014-04-03 16:17:18.645 30471 INFO nova.openstack.common.service [-] Started child 30789
+2014-04-03 16:17:18.756 30789 INFO nova.ec2.wsgi.server [-] (30789) wsgi starting up on http://0.0.0.0:8773/
+
+2014-04-03 16:17:18.965 30471 AUDIT nova.api.openstack.compute.extensions [-] Initializing extension manager.
+2014-04-03 16:17:19.017 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-start-stop
+2014-04-03 16:17:19.025 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-config-drive
+2014-04-03 16:17:19.033 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-security-group-default-rules
+2014-04-03 16:17:19.051 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-SRV-ATTR
+2014-04-03 16:17:19.065 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-services
+2014-04-03 16:17:19.073 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-STS
+2014-04-03 16:17:19.082 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ip-dns
+2014-04-03 16:17:19.117 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-consoles
+2014-04-03 16:17:19.121 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IMG-SIZE
+2014-04-03 16:17:19.131 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-password
+2014-04-03 16:17:19.153 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-networks
+2014-04-03 16:17:19.162 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-SCH-HNT
+2014-04-03 16:17:19.173 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-attach-interfaces
+2014-04-03 16:17:19.188 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IPS-MAC
+2014-04-03 16:17:19.206 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-coverage
+2014-04-03 16:17:19.233 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-shelve
+2014-04-03 16:17:19.234 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-quota-sets
+2014-04-03 16:17:19.249 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-VIF-NET
+2014-04-03 16:17:19.260 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-baremetal-nodes
+2014-04-03 16:17:19.293 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-quotas
+2014-04-03 16:17:19.310 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-volumes
+2014-04-03 16:17:19.321 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-fixed-ips
+2014-04-03 16:17:19.330 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-aggregates
+2014-04-03 16:17:19.341 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ips
+2014-04-03 16:17:19.349 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: NMN
+2014-04-03 16:17:19.361 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-AZ
+2014-04-03 16:17:19.365 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ip-pools
+2014-04-03 16:17:19.377 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-floating-ips
+2014-04-03 16:17:19.385 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-security-groups
+2014-04-03 16:17:19.386 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-virtual-interfaces
+2014-04-03 16:17:19.401 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-assisted-volume-snapshots
+2014-04-03 16:17:19.409 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-used-limits
+2014-04-03 16:17:19.417 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-rescue
+2014-04-03 16:17:19.429 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cell-capacities
+2014-04-03 16:17:19.433 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-create-server-ext
+2014-04-03 16:17:19.445 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-instance_usage_audit_log
+2014-04-03 16:17:19.449 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-availability-zone
+2014-04-03 16:17:19.455 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-quota-class-sets
+2014-04-03 16:17:19.466 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-rxtx
+2014-04-03 16:17:19.477 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ips-bulk
+2014-04-03 16:17:19.487 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-admin-actions
+2014-04-03 16:17:19.505 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-extra-specs
+2014-04-03 16:17:19.511 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-instance-actions
+2014-04-03 16:17:19.521 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cloudpipe-update
+2014-04-03 16:17:19.525 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hide-server-addresses
+2014-04-03 16:17:19.545 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-block-device-mapping-v2-boot
+2014-04-03 16:17:19.546 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-volume-attachment-update
+2014-04-03 16:17:19.555 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IPS
+2014-04-03 16:17:19.565 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-agents
+2014-04-03 16:17:19.579 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-fping
+2014-04-03 16:17:19.586 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-diagnostics
+2014-04-03 16:17:19.593 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-tenant-networks
+2014-04-03 16:17:19.610 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-console-output
+2014-04-03 16:17:19.617 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-FLV-EXT-DATA
+2014-04-03 16:17:19.625 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-deferred-delete
+2014-04-03 16:17:19.630 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-swap
+2014-04-03 16:17:19.644 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-volumes
+2014-04-03 16:17:19.684 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-FLV-DISABLED
+2014-04-03 16:17:19.693 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-certificates
+2014-04-03 16:17:19.701 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hypervisors
+2014-04-03 16:17:19.717 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-evacuate
+2014-04-03 16:17:19.720 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-networks-associate
+2014-04-03 16:17:19.733 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-services
+2014-04-03 16:17:19.747 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-DCF
+2014-04-03 16:17:19.753 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-keypairs
+2014-04-03 16:17:19.770 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cells
+2014-04-03 16:17:19.785 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cloudpipe
+2014-04-03 16:17:19.797 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-user-quotas
+2014-04-03 16:17:19.805 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-manage
+2014-04-03 16:17:19.813 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-SRV-USG
+2014-04-03 16:17:19.817 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hosts
+2014-04-03 16:17:19.832 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-multiple-create
+2014-04-03 16:17:19.849 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-used-limits-for-admin
+2014-04-03 16:17:19.850 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-user-data
+2014-04-03 16:17:19.855 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-migrations
+2014-04-03 16:17:19.857 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-access
+2014-04-03 16:17:19.862 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-simple-tenant-usage
+2014-04-03 16:17:21.661 30471 INFO keystoneclient.middleware.auth_token [-] Starting keystone auth_token middleware
+2014-04-03 16:17:21.675 30471 INFO keystoneclient.middleware.auth_token [-] Using /tmp/keystone-signing-SPKvzn as cache directory for signing certificate
+2014-04-03 16:17:21.698 30471 INFO nova.api.openstack [-] V3 API has been disabled by configuration
+2014-04-03 16:17:21.716 30471 INFO keystoneclient.middleware.auth_token [-] Starting keystone auth_token middleware
+2014-04-03 16:17:21.721 30471 INFO keystoneclient.middleware.auth_token [-] Using /tmp/keystone-signing-Ni0N0S as cache directory for signing certificate
+2014-04-03 16:17:21.724 30471 AUDIT nova.api.openstack.compute.extensions [-] Initializing extension manager.
+2014-04-03 16:17:21.758 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-start-stop
+2014-04-03 16:17:21.782 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-config-drive
+2014-04-03 16:17:21.787 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-security-group-default-rules
+2014-04-03 16:17:21.793 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-SRV-ATTR
+2014-04-03 16:17:21.805 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-services
+2014-04-03 16:17:21.813 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-STS
+2014-04-03 16:17:21.817 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ip-dns
+2014-04-03 16:17:21.818 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-consoles
+2014-04-03 16:17:21.826 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IMG-SIZE
+2014-04-03 16:17:21.828 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-password
+2014-04-03 16:17:21.836 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-networks
+2014-04-03 16:17:21.853 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-SCH-HNT
+2014-04-03 16:17:21.854 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-attach-interfaces
+2014-04-03 16:17:21.856 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IPS-MAC
+2014-04-03 16:17:21.857 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-coverage
+2014-04-03 16:17:21.861 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-shelve
+2014-04-03 16:17:21.869 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-quota-sets
+2014-04-03 16:17:21.873 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-VIF-NET
+2014-04-03 16:17:21.874 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-baremetal-nodes
+2014-04-03 16:17:21.883 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-quotas
+2014-04-03 16:17:21.893 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-volumes
+2014-04-03 16:17:21.893 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-fixed-ips
+2014-04-03 16:17:21.909 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-aggregates
+2014-04-03 16:17:21.911 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ips
+2014-04-03 16:17:21.916 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: NMN
+2014-04-03 16:17:21.921 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-AZ
+2014-04-03 16:17:21.921 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ip-pools
+2014-04-03 16:17:21.922 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-extended-floating-ips
+2014-04-03 16:17:21.925 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-security-groups
+2014-04-03 16:17:21.929 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-virtual-interfaces
+2014-04-03 16:17:21.930 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-assisted-volume-snapshots
+2014-04-03 16:17:21.936 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-used-limits
+2014-04-03 16:17:21.941 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-rescue
+2014-04-03 16:17:21.945 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cell-capacities
+2014-04-03 16:17:21.953 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-create-server-ext
+2014-04-03 16:17:21.954 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-instance_usage_audit_log
+2014-04-03 16:17:21.957 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-availability-zone
+2014-04-03 16:17:21.960 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-quota-class-sets
+2014-04-03 16:17:21.961 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-rxtx
+2014-04-03 16:17:21.962 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-floating-ips-bulk
+2014-04-03 16:17:21.973 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-admin-actions
+2014-04-03 16:17:21.979 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-extra-specs
+2014-04-03 16:17:21.985 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-instance-actions
+2014-04-03 16:17:21.986 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cloudpipe-update
+2014-04-03 16:17:21.989 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hide-server-addresses
+2014-04-03 16:17:21.997 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-block-device-mapping-v2-boot
+2014-04-03 16:17:22.001 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-volume-attachment-update
+2014-04-03 16:17:22.001 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-EXT-IPS
+2014-04-03 16:17:22.004 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-agents
+2014-04-03 16:17:22.011 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-fping
+2014-04-03 16:17:22.013 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-server-diagnostics
+2014-04-03 16:17:22.013 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-tenant-networks
+2014-04-03 16:17:22.017 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-console-output
+2014-04-03 16:17:22.021 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-FLV-EXT-DATA
+2014-04-03 16:17:22.029 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-deferred-delete
+2014-04-03 16:17:22.036 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-swap
+2014-04-03 16:17:22.041 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-volumes
+2014-04-03 16:17:22.041 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-FLV-DISABLED
+2014-04-03 16:17:22.045 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-certificates
+2014-04-03 16:17:22.045 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hypervisors
+2014-04-03 16:17:22.049 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-evacuate
+2014-04-03 16:17:22.049 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-networks-associate
+2014-04-03 16:17:22.057 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-services
+2014-04-03 16:17:22.057 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-DCF
+2014-04-03 16:17:22.061 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-keypairs
+2014-04-03 16:17:22.069 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cells
+2014-04-03 16:17:22.077 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-cloudpipe
+2014-04-03 16:17:22.080 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-user-quotas
+2014-04-03 16:17:22.085 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-manage
+2014-04-03 16:17:22.086 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: OS-SRV-USG
+2014-04-03 16:17:22.087 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-hosts
+2014-04-03 16:17:22.097 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-multiple-create
+2014-04-03 16:17:22.101 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-used-limits-for-admin
+2014-04-03 16:17:22.101 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-user-data
+2014-04-03 16:17:22.104 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-migrations
+2014-04-03 16:17:22.109 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-flavor-access
+2014-04-03 16:17:22.113 30471 AUDIT nova.api.openstack.extensions [-] Loaded extension: os-simple-tenant-usage
+2014-04-03 16:17:23.334 30471 INFO keystoneclient.middleware.auth_token [-] Starting keystone auth_token middleware
+2014-04-03 16:17:23.341 30471 INFO keystoneclient.middleware.auth_token [-] Using /tmp/keystone-signing-rxGYQ9 as cache directory for signing certificate
+2014-04-03 16:17:23.342 30471 INFO nova.wsgi [-] osapi_compute listening on 0.0.0.0:8774
+2014-04-03 16:17:23.344 30471 INFO nova.openstack.common.service [-] Starting 1 workers
+2014-04-03 16:17:23.347 30471 INFO nova.openstack.common.service [-] Started child 30851
+2014-04-03 16:17:23.374 30471 INFO nova.network.driver [-] Loading network driver 'nova.network.linux_net'
+2014-04-03 16:17:23.389 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) wsgi starting up on http://0.0.0.0:8774/
+
+2014-04-03 16:17:23.403 30471 INFO nova.wsgi [-] metadata listening on 0.0.0.0:8775
+2014-04-03 16:17:23.407 30471 INFO nova.openstack.common.service [-] Starting 1 workers
+2014-04-03 16:17:23.417 30471 INFO nova.openstack.common.service [-] Started child 30853
+2014-04-03 16:17:23.910 30853 INFO nova.metadata.wsgi.server [-] (30853) wsgi starting up on http://0.0.0.0:8775/
+
+2014-04-03 16:19:02.152 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45796)
+
+2014-04-03 16:19:04.169 30851 INFO nova.osapi_compute.wsgi.server [req-61a9042e-fe4d-4649-98d6-9da7b47ce62c 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/detail HTTP/1.1" status: 200 len: 187 time: 2.0130470
+
+2014-04-03 16:19:19.673 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45804)
+
+2014-04-03 16:19:20.330 30851 INFO nova.osapi_compute.wsgi.server [req-a5ec1655-6563-4028-8985-0a35bf0bbf99 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/images/eeda37d3-f5ca-4f10-a03b-d9ef9959765c HTTP/1.1" status: 200 len: 890 time: 0.6549048
+
+2014-04-03 16:19:20.354 30851 INFO nova.osapi_compute.wsgi.server [req-dc5f7e3a-f344-476f-b9c1-2d4029e54d57 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/flavors/6 HTTP/1.1" status: 200 len: 591 time: 0.0233572
+
+2014-04-03 16:19:20.945 30851 INFO nova.openstack.common.rpc.common [req-5fd2ed32-d4f1-4083-906a-d425c5e5c7b5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] Connected to AMQP server on controller:5672
+2014-04-03 16:19:20.969 30851 INFO nova.osapi_compute.wsgi.server [req-5fd2ed32-d4f1-4083-906a-d425c5e5c7b5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers HTTP/1.1" status: 202 len: 730 time: 0.6130269
+
+2014-04-03 16:19:21.207 30851 INFO nova.osapi_compute.wsgi.server [req-b59b8d87-4232-4223-8343-574315a34d88 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1595 time: 0.2351410
+
+2014-04-03 16:19:21.249 30851 INFO nova.osapi_compute.wsgi.server [req-6a739024-306a-4e85-85e0-12d8d48bed1e 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/flavors/6 HTTP/1.1" status: 200 len: 591 time: 0.0403960
+
+2014-04-03 16:19:21.429 30851 INFO nova.osapi_compute.wsgi.server [req-0aed4bb6-586d-49dc-9f67-9bfc91042ba9 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/images/eeda37d3-f5ca-4f10-a03b-d9ef9959765c HTTP/1.1" status: 200 len: 890 time: 0.1758618
+
+2014-04-03 16:19:26.702 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45835)
+
+2014-04-03 16:19:27.369 30851 INFO nova.osapi_compute.wsgi.server [req-c42de522-e04d-4c9a-b76c-5dba4432a794 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/detail HTTP/1.1" status: 200 len: 1848 time: 0.6605020
+
+2014-04-03 16:19:45.709 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45839)
+
+2014-04-03 16:19:46.048 30851 INFO nova.osapi_compute.wsgi.server [req-bb4d664b-702d-44f6-b1e6-2ee7bbe3776b 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1845 time: 0.3361521
+
+2014-04-03 16:19:46.162 30851 INFO nova.openstack.common.rpc.common [req-637f4a28-8a82-4db9-a82b-3cca38a7588e 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] Connected to AMQP server on controller:5672
+2014-04-03 16:19:46.329 30851 INFO nova.osapi_compute.wsgi.server [req-637f4a28-8a82-4db9-a82b-3cca38a7588e 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54/action HTTP/1.1" status: 200 len: 16860 time: 0.2789431
+
+2014-04-03 16:20:31.432 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45844)
+
+2014-04-03 16:20:31.757 30851 INFO nova.osapi_compute.wsgi.server [req-c2930562-58e8-401d-a678-0c5768262543 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1845 time: 0.3219678
+
+2014-04-03 16:20:32.009 30851 INFO nova.osapi_compute.wsgi.server [req-7a03b35b-ef52-4ca8-87a9-fd560da4b7da 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54/action HTTP/1.1" status: 200 len: 17291 time: 0.2493789
+
+2014-04-03 16:21:09.597 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45848)
+
+2014-04-03 16:21:09.935 30851 INFO nova.osapi_compute.wsgi.server [req-0b0c8268-f350-44dc-8528-fc7c9ea91974 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1845 time: 0.3355608
+
+2014-04-03 16:21:10.150 30851 INFO nova.osapi_compute.wsgi.server [req-74dcf800-a4c5-4d79-a3b4-15075b7f1f9a 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54/action HTTP/1.1" status: 200 len: 17858 time: 0.2135320
+
+2014-04-03 16:21:20.233 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45852)
+
+2014-04-03 16:21:20.408 30851 INFO nova.osapi_compute.wsgi.server [req-64b75461-6c3a-47d3-94c9-cf137658d3ba 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1845 time: 0.1733618
+
+2014-04-03 16:21:20.545 30851 INFO nova.osapi_compute.wsgi.server [req-ac3a6744-929e-47f3-a130-9181e49144f5 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54/action HTTP/1.1" status: 200 len: 19619 time: 0.1350639
+
+2014-04-03 16:21:26.262 30851 INFO nova.osapi_compute.wsgi.server [-] (30851) accepted ('127.0.0.1', 45856)
+
+2014-04-03 16:21:26.588 30851 INFO nova.osapi_compute.wsgi.server [req-c4c6decd-e9ca-4b57-ad4c-c815e2d6b3cf 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "GET /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54 HTTP/1.1" status: 200 len: 1845 time: 0.3236430
+
+2014-04-03 16:21:26.770 30851 INFO nova.osapi_compute.wsgi.server [req-3f1d739b-7fb0-4aed-80f8-d2e33b5d91ce 51ec78d3acd54e49a159516bb4979dc4 fd2b05cbcbd2418a9767633d0130e127] 127.0.0.1 "POST /v2/fd2b05cbcbd2418a9767633d0130e127/servers/bd558c6f-fba2-4481-8473-a39085a00a54/action HTTP/1.1" status: 200 len: 19619 time: 0.1788478
+
