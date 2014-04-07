@@ -1,0 +1,40 @@
+#!/usr/bin/python
+from sets import Set
+import sys
+import os
+import pdb
+import re
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+dir_path=sys.argv[1]
+tmp_content=[]
+print dir_path
+if len(sys.argv) != 2 :
+	print "incorrect dir please give name of dir"
+
+else:
+	print "recursing through dir"
+	file_names= os.listdir(dir_path)
+	pdb.set_trace()
+	for item in file_names:
+		if os.path.isfile(dir_path+"/"+item):
+			fd_r = open(dir_path+"/"+item,"r")
+			content = fd_r.readlines()
+			for line in content:
+				line1 = line.split(" ")
+				if len(line1)>=5:
+					tmp_content.append(line1[4])
+
+
+#p = re.compile('*\.*')
+
+#content = Set(tmp_content)			
+
+#filtered_con=""
+#for x in content:
+#	if p.match(x):
+#		filtered_con+=x+"\n"
+#fd_w = open("filters.txt","a")
+#fd_w.write(filtered_con)
+
+		
